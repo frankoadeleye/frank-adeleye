@@ -35,7 +35,7 @@ export default function Footer() {
             </a>
 
             <a
-              href="https://github.com/YOUR_USERNAME"
+              href="https://github.com/frankoadeleye"
               target="_blank"
               rel="noreferrer"
               data-nav-item
