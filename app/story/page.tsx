@@ -96,13 +96,13 @@ export default function StoryPage() {
             <p>
               I like thinking about what data should look like, what an API
               should allow, what happens when someone sends something they
-              shouldn&apos;t, how authentication and authorization should work,
-              and what the application should do when things go wrong.
+              shouldn't, how authentication and authorization should work, and
+              what the application should do when things go wrong.
             </p>
 
             <p>
-              I don&apos;t always get those decisions right on the first try.
-              That is part of what I enjoy about software.{" "}
+              I don't always get those decisions right on the first try. That is
+              part of what I enjoy about software.{" "}
               <strong className="font-semibold text-yellow-500 dark:text-yellow-300">
                 A problem usually gives you another chance to understand it
                 better.
@@ -124,13 +124,17 @@ export default function StoryPage() {
             <p>
               After spending years working primarily with React and Next.js, I
               wanted to understand the other side of the application properly.
-              So I decided to build something where I couldn&apos;t just focus
-              on the interface.
+              <strong className="font-semibold text-yellow-500 dark:text-yellow-300">
+                So I decided to build something
+              </strong>{" "}
+              where I couldn't just focus on the interface.
             </p>
 
             <p>
-              That became EverAfter, a memory-preservation application built
-              with the MERN stack.
+              <strong className="font-semibold text-yellow-500 dark:text-yellow-300">
+                That became EverAfter,
+              </strong>{" "}
+              a memory-preservation application built with the MERN stack.
             </p>
 
             <p>
@@ -141,10 +145,15 @@ export default function StoryPage() {
             </p>
 
             <p>
-              More importantly, it changed the questions I ask when I build. I
-              started thinking less about whether a feature simply works and
-              more about what should happen when someone uses it in a way I
-              didn&apos;t expect.
+              More importantly, it changed the questions I ask when I build.{" "}
+              <strong className="font-semibold text-yellow-500 dark:text-yellow-300">
+                I started thinking
+              </strong>{" "}
+              less about whether a feature simply works and{" "}
+              <strong className="font-semibold text-yellow-500 dark:text-yellow-300">
+                more about what should happen
+              </strong>{" "}
+              when someone uses it in a way I didn't expect.
             </p>
 
             <div className="flex flex-wrap gap-4 pt-2">
@@ -209,10 +218,13 @@ export default function StoryPage() {
             </p>
 
             <p>
-              What hooked me was the feedback loop. When something didn&apos;t
-              work, I could investigate it, change something, run it again, and
-              see what happened. I liked that problems were not completely
-              mysterious. There was usually something to understand.
+              <strong className="font-semibold text-yellow-500 dark:text-yellow-300">
+                What hooked me was the feedback loop.
+              </strong>{" "}
+              When something didn't work, I could investigate it, change
+              something, run it again, and see what happened. I liked that
+              problems were not completely mysterious. There was usually
+              something to understand.
             </p>
 
             <p>
@@ -249,8 +261,8 @@ export default function StoryPage() {
 
           <div className="mt-8 space-y-6 text-zinc-600 dark:text-zinc-400">
             <p>
-              I&apos;m most interested in backend-heavy applications where there
-              are real decisions to make around data, APIs, security, business
+              I'm most interested in backend-heavy applications where there are
+              real decisions to make around data, APIs, security, business
               logic, and application architecture.
             </p>
 
@@ -261,11 +273,10 @@ export default function StoryPage() {
             </p>
 
             <p>
-              And because I came from the frontend, I don&apos;t see the
-              interface and the backend as two completely separate worlds. I can
-              build the frontend when I need to, but I increasingly enjoy
-              spending my time thinking about what makes the application work
-              underneath it.
+              And because I came from the frontend, I don't see the interface
+              and the backend as two completely separate worlds. I can build the
+              frontend when I need to, but I increasingly enjoy spending my time
+              thinking about what makes the application work underneath it.
             </p>
           </div>
         </section>
@@ -281,7 +292,9 @@ export default function StoryPage() {
 
           <div className="mt-8 space-y-6 text-zinc-600 dark:text-zinc-400">
             <p>
-              I like working with people who are comfortable asking questions.
+              <strong className="font-semibold text-yellow-500 dark:text-yellow-300">
+                I like working with people who are comfortable asking questions.
+              </strong>{" "}
               Not just &quot;what are we building?&quot;, but &quot;why are we
               building it this way?&quot;
             </p>
@@ -289,7 +302,7 @@ export default function StoryPage() {
             <p>
               I enjoy investigating problems properly, talking through different
               approaches, and learning from people who have already dealt with
-              problems I haven&apos;t encountered yet.
+              problems I haven't encountered yet.
             </p>
 
             <p>
@@ -302,7 +315,7 @@ export default function StoryPage() {
         {/* Growth */}
         <section className="mt-24">
           <p className="mb-3 text-sm font-medium uppercase tracking-[0.25em] text-zinc-500 dark:text-zinc-400">
-            Where I&apos;m going
+            Where I'm going
           </p>
 
           <h2 className="text-3xl font-semibold tracking-tight">
@@ -316,7 +329,10 @@ export default function StoryPage() {
             </p>
 
             <p>
-              That means continuing to improve in areas like backend
+              That means{" "}
+              <strong className="font-semibold text-yellow-500 dark:text-yellow-300">
+                continuing to improve in areas like backend
+              </strong>
               architecture, API design, data modeling, authentication,
               authorization, performance, and system design.
             </p>
@@ -332,12 +348,12 @@ export default function StoryPage() {
         {/* Contact */}
         <section className="mt-24 border-t border-zinc-200 pt-12 dark:border-zinc-800">
           <h2 className="text-3xl font-semibold tracking-tight">
-            Let&apos;s work together
+            Let's work together
           </h2>
 
           <p className="mt-6 max-w-2xl text-zinc-600 dark:text-zinc-400">
             If you enjoy building software, solving problems, and figuring out
-            how things work, I&apos;d be happy to talk.
+            how things work, I'd be happy to talk.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">
