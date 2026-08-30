@@ -255,7 +255,7 @@ export default function StoryPage() {
             </p>
 
             <Link
-              href="/projects/everafter"
+              href="/case-study/everafter"
               data-nav-item
               className="
                 mt-2
