@@ -8,8 +8,10 @@ export default function EverAfterCaseStudyPage() {
         <ThemeToggle />
       </div>
       <div className="mx-auto max-w-4xl px-6 py-24">
+        {/* Back to portfolio */}
         <Link
           href="/"
+          data-nav-item
           className="
             mb-12
             inline-flex
@@ -410,11 +412,12 @@ Cloudinary Media Storage
             <li>AI-assisted memory categorization</li>
           </ul>
         </section>
+        {/* Back to portfolio */}
         <Link
           href="/"
+          data-nav-item
           className="
             mb-12
-            mt-12
             inline-flex
             rounded-full
             border
