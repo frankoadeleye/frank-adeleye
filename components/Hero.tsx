@@ -16,24 +16,24 @@ export default function Hero() {
       "
     >
       <p className="mb-4 text-sm font-medium uppercase tracking-[0.25em] text-neutral-500 dark:text-neutral-400">
-        TypeScript • Node.js • Full-Stack Engineer
+        TypeScript • Node.js • Full-Stack Developer
       </p>
 
       <div className="mb-6">
         <span
           className="
-      inline-flex
-      items-center
-      rounded-full
-      border
-      border-emerald-300
-      px-3
-      py-1
-      text-sm
-      text-emerald-700
-      dark:border-emerald-800
-      dark:text-emerald-400
-    "
+            inline-flex
+            items-center
+            rounded-full
+            border
+            border-emerald-300
+            px-3
+            py-1
+            text-sm
+            text-emerald-700
+            dark:border-emerald-800
+            dark:text-emerald-400
+          "
         >
           ● Open to new opportunities
         </span>
@@ -44,16 +44,17 @@ export default function Hero() {
       </h1>
 
       <p className="mt-8 max-w-2xl text-lg leading-8 text-neutral-600 dark:text-neutral-400">
-        I build software with TypeScript across the stack, from user interfaces
-        to APIs, authentication systems, database design, and backend
-        architecture.
+        I think one of the reasons I fell in love with software is that problems
+        are usually trying to tell you something. When something breaks, there's
+        a reason - and I genuinely enjoy figuring out what it is.
       </p>
 
       <p className="mt-5 max-w-2xl text-lg leading-8 text-neutral-600 dark:text-neutral-400">
-        Over the years I've worked extensively with React and Next.js, but I've
-        become increasingly interested in the engineering decisions behind
-        applications — data modeling, security, business rules, performance, and
-        the systems that make products reliable at scale.
+        These days, that curiosity pulls me more toward the backend: APIs, data,
+        authentication, business logic, and the decisions that determine how an
+        application actually behaves. I started with React and Next.js, so I'm
+        comfortable across the stack, but backend development is where I find
+        myself wanting to dig deeper.
       </p>
 
       <div className="mt-8 flex flex-wrap gap-4">
