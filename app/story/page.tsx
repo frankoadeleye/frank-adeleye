@@ -173,27 +173,29 @@ export default function StoryPage() {
                 Read the EverAfter case study →
               </Link>
 
-              <a
+              <Link
                 href="https://everafter-ocel.onrender.com"
                 target="_blank"
                 rel="noopener noreferrer"
                 data-nav-item
                 className="
-                  inline-flex
-                  rounded-full
-                  border
-                  border-zinc-300
-                  px-4
-                  py-2
-                  text-sm
-                  transition
-                  hover:bg-zinc-100
-                  dark:border-zinc-700
-                  dark:hover:bg-zinc-800
+                   relative
+                    overflow-hidden
+                    rounded-full
+                    border
+                    border-yellow-400
+                    px-4
+                    py-2
+                    font-medium
+                    text-yellow-600
+                    transition-all
+                    hover:scale-105
+                    hover:bg-yellow-50
+                    dark:hover:bg-yellow-950/20
                 "
               >
-                See EverAfter in action →
-              </a>
+                ⭐ See EverAfter in action →
+              </Link>
             </div>
           </div>
         </section>

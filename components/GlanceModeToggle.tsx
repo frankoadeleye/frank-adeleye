@@ -9,6 +9,7 @@ export default function GlanceModeToggle() {
     <button
       onClick={toggle}
       className="
+      cursor-pointer
         rounded-full
         border
         border-zinc-300
