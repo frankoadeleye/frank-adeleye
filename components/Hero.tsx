@@ -16,23 +16,44 @@ export default function Hero() {
       "
     >
       <p className="mb-4 text-sm font-medium uppercase tracking-[0.25em] text-neutral-500 dark:text-neutral-400">
-        Frontend & Full-Stack Developer
+        TypeScript • Node.js • Full-Stack Engineer
       </p>
 
+      <div className="mb-6">
+        <span
+          className="
+      inline-flex
+      items-center
+      rounded-full
+      border
+      border-emerald-300
+      px-3
+      py-1
+      text-sm
+      text-emerald-700
+      dark:border-emerald-800
+      dark:text-emerald-400
+    "
+        >
+          ● Open to new opportunities
+        </span>
+      </div>
+
       <h1 className="text-5xl font-semibold tracking-tight sm:text-6xl">
-        Hi, I&apos;m Frank.
+        Hi, I'm Frank.
       </h1>
 
       <p className="mt-8 max-w-2xl text-lg leading-8 text-neutral-600 dark:text-neutral-400">
-        I&apos;m looking to join a team where I can build useful software, solve
-        real engineering problems, and keep growing as an engineer.
+        I build software with TypeScript across the stack, from user interfaces
+        to APIs, authentication systems, database design, and backend
+        architecture.
       </p>
 
       <p className="mt-5 max-w-2xl text-lg leading-8 text-neutral-600 dark:text-neutral-400">
-        I started in frontend development with React and Next.js and have since
-        expanded into backend development with TypeScript, Node.js, Express, and
-        MongoDB. I enjoy understanding how the pieces of an application fit
-        together — not just making the interface work.
+        Over the years I've worked extensively with React and Next.js, but I've
+        become increasingly interested in the engineering decisions behind
+        applications — data modeling, security, business rules, performance, and
+        the systems that make products reliable at scale.
       </p>
 
       <div className="mt-8 flex flex-wrap gap-4">

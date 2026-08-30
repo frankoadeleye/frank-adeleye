@@ -43,7 +43,7 @@ export default function StoryPage() {
           </h1>
 
           <p className="mt-8 max-w-3xl text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            My path into software development wasn&apos;t exactly traditional. I
+            My path into software development wasn't exactly traditional. I
             started out studying Mechanical Engineering, but programming
             eventually became the thing I wanted to spend my time getting better
             at.
@@ -68,7 +68,7 @@ export default function StoryPage() {
 
             <p>
               What pulled me toward programming was the feedback loop. When
-              something doesn&apos;t work, there is usually a reason. I can
+              something doesn't work, there is usually a reason. I can
               investigate it, understand what went wrong, change something, and
               see the result.
             </p>
@@ -98,9 +98,9 @@ export default function StoryPage() {
             </p>
 
             <p>
-              The website isn&apos;t live anymore, but the experience stayed
-              with me. I was given room to make decisions instead of simply
-              being told exactly what to build.
+              The website isn't live anymore, but the experience stayed with me.
+              I was given room to make decisions instead of simply being told
+              exactly what to build.
             </p>
 
             <p>
@@ -112,7 +112,7 @@ export default function StoryPage() {
             <p>
               It was one of my earliest lessons that frontend development is
               about more than turning designs into code. You also have to think
-              about what you&apos;re building and why.
+              about what you're building and why.
             </p>
           </div>
         </section>
@@ -155,25 +155,25 @@ export default function StoryPage() {
           </p>
 
           <h2 className="text-3xl font-semibold tracking-tight">
-            Getting comfortable with React and TypeScript
+            Building products on the frontend
           </h2>
 
           <div className="mt-8 space-y-6 text-zinc-600 dark:text-zinc-400">
             <p>
-              Over the following years, I worked on a number of projects as a
-              React and TypeScript developer.
+              Over the following years, I worked on a variety of projects using
+              React, Next.js, JavaScript, and TypeScript.
             </p>
 
             <p>
-              Frontend development became the area where I had the most
-              experience. I spent a lot of time learning how to build interfaces
-              that were responsive, maintainable, and able to grow as the
-              application grew.
+              Those years taught me far more than how to build interfaces. They
+              taught me how products evolve, how requirements change, how users
+              interact with software, and how technical decisions affect the
+              people using what we build.
             </p>
 
             <p>
-              But eventually, I started becoming curious about everything
-              happening behind the interface.
+              The deeper I got into product development, the more curious I
+              became about everything happening beyond the browser.
             </p>
           </div>
         </section>
@@ -185,33 +185,30 @@ export default function StoryPage() {
           </p>
 
           <h2 className="text-3xl font-semibold tracking-tight">
-            Why I started learning backend development
+            Why I became interested in backend systems
           </h2>
 
           <div className="mt-8 space-y-6 text-zinc-600 dark:text-zinc-400">
             <p>
-              I eventually got tired of treating the backend as something that
-              happened somewhere behind an API endpoint.
+              At some point I realized I was spending more time thinking about
+              the systems behind applications than the screens in front of them.
             </p>
 
             <p>
-              I wanted to understand what actually happened after the frontend
-              made a request - how the server validated it, how data was
-              modeled, how users were authenticated and authorized, how business
-              rules were enforced, and what happened when something went wrong.
+              I wanted to understand how APIs were designed, how business rules
+              were enforced, how authentication and authorization worked, how
+              data models evolved, and how applications remained reliable as
+              complexity grew.
             </p>
 
             <p>
-              I also became more convinced that frontend and backend development
-              are closely connected. Understanding the system behind an API
-              makes it easier to make good decisions on the frontend, and
-              understanding the user experience helps when designing backend
-              systems.
+              The backend stopped feeling like a black box behind an endpoint
+              and became the part of software I was most curious about.
             </p>
 
             <p>
-              So I started learning the MERN stack on my own and began building
-              applications from the other side of the boundary as well.
+              That curiosity led me into Node.js, Express, MongoDB, and
+              eventually full-stack development.
             </p>
           </div>
         </section>
@@ -223,7 +220,7 @@ export default function StoryPage() {
           </p>
 
           <h2 className="text-3xl font-semibold tracking-tight">
-            That&apos;s where EverAfter came from
+            That's where EverAfter came from
           </h2>
 
           <div className="mt-8 space-y-6 text-zinc-600 dark:text-zinc-400">
@@ -241,17 +238,16 @@ export default function StoryPage() {
             </p>
 
             <p>
-              This time, I wasn&apos;t only thinking about the interface. I had
-              to think about the product, the data model, the API,
-              authentication, authorization, business rules, database
-              relationships, media storage, validation, performance, and
-              deployment.
+              This time, I wasn't only thinking about the interface. I had to
+              think about the product, the data model, the API, authentication,
+              authorization, business rules, database relationships, media
+              storage, validation, performance, and deployment.
             </p>
 
             <p>
               The project pushed me beyond simply asking, &quot;Does this
               feature work?&quot; I had to start asking, &quot;What should
-              happen when it doesn&apos;t?&quot;
+              happen when it doesn't?&quot;
             </p>
 
             <Link
@@ -307,28 +303,28 @@ export default function StoryPage() {
           </p>
 
           <h2 className="text-3xl font-semibold tracking-tight">
-            What I&apos;m looking for
+            What I enjoy building
           </h2>
 
           <div className="mt-8 space-y-6 text-zinc-600 dark:text-zinc-400">
+            <p>I enjoy building products where engineering decisions matter.</p>
+
             <p>
-              I&apos;m looking for an opportunity to join a team where I can
-              contribute to a real product, work through real engineering
-              problems, and continue growing alongside other developers.
+              The kinds of problems that interest me most involve backend
+              systems, APIs, data modeling, authentication, authorization,
+              application architecture, and the business rules that shape how
+              software behaves.
             </p>
 
             <p>
-              My strongest professional background is in frontend development,
-              particularly React, Next.js, JavaScript, and TypeScript. More
-              recently, I&apos;ve expanded into backend development with
-              TypeScript, Node.js, Express, and MongoDB.
+              At the same time, I value understanding the complete user journey,
+              which is why I continue to enjoy working across the entire stack
+              when the project calls for it.
             </p>
 
             <p>
-              I&apos;m open to frontend, backend, and full-stack opportunities.
-              I don&apos;t need to fit neatly into one title. I&apos;m more
-              interested in joining a team where I can contribute, learn, take
-              ownership, and work on software that people actually use.
+              I care about building software that is maintainable,
+              understandable, and useful long after the first version ships.
             </p>
           </div>
         </section>
@@ -356,9 +352,9 @@ export default function StoryPage() {
             </p>
 
             <p>
-              I&apos;m particularly interested in teams where frontend and
-              backend engineers work closely together rather than treating the
-              boundary between them as a wall.
+              I enjoy environments where product discussions, backend
+              architecture, and frontend implementation are connected rather
+              than treated as completely separate concerns.
             </p>
 
             <p>
@@ -381,21 +377,21 @@ export default function StoryPage() {
 
           <div className="mt-8 space-y-6 text-zinc-600 dark:text-zinc-400">
             <p>
-              I&apos;m currently particularly interested in TypeScript, Node.js,
-              backend architecture, API design, data modeling, authentication,
-              authorization, and full-stack application development.
+              Right now I'm particularly interested in backend architecture,
+              distributed application design, data modeling, API design,
+              authentication, authorization, and building reliable production
+              systems.
             </p>
 
             <p>
-              Building EverAfter made me want to go deeper into the engineering
-              problems behind production applications.
+              Building EverAfter reinforced how much I enjoy solving engineering
+              problems that extend beyond individual features.
             </p>
 
             <p>
-              I know there&apos;s still a lot I haven&apos;t encountered yet.
-              That&apos;s one of the things I&apos;m looking forward to in my
-              next role: working alongside engineers who have solved problems I
-              haven&apos;t seen before.
+              The more I learn, the more interested I become in understanding
+              how larger systems evolve, scale, and remain maintainable over
+              time.
             </p>
           </div>
         </section>
@@ -407,7 +403,7 @@ export default function StoryPage() {
           </p>
 
           <h2 className="text-3xl font-semibold tracking-tight">
-            I&apos;m not done learning
+            I'm not done learning
           </h2>
 
           <div className="mt-8 space-y-6 text-zinc-600 dark:text-zinc-400">
@@ -418,16 +414,15 @@ export default function StoryPage() {
             </p>
 
             <p>
-              I&apos;m confident in the skills I&apos;ve developed so far, but
-              I&apos;m also aware that personal projects can only expose you to
-              so much.
+              I'm confident in the skills I've developed so far, but I'm also
+              aware that personal projects can only expose you to so much.
             </p>
 
             <p>
-              I&apos;m looking forward to the kind of learning that comes from
+              I'm looking forward to the kind of learning that comes from
               working with an experienced team, contributing to a production
-              codebase, and encountering problems that don&apos;t have a
-              tutorial telling me what to do next.
+              codebase, and encountering problems that don't have a tutorial
+              telling me what to do next.
             </p>
           </div>
         </section>
@@ -435,13 +430,13 @@ export default function StoryPage() {
         {/* Contact */}
         <section className="mt-24 border-t border-zinc-200 pt-12 dark:border-zinc-800">
           <h2 className="text-3xl font-semibold tracking-tight">
-            Let&apos;s work together
+            Let's work together
           </h2>
 
           <p className="mt-6 max-w-2xl text-zinc-600 dark:text-zinc-400">
-            If you&apos;re looking for a developer who enjoys understanding
-            problems, building things, and learning along the way, I&apos;d be
-            happy to hear from you.
+            If you'd like to talk about software engineering, backend
+            development, TypeScript, Node.js, product development, or potential
+            opportunities to work together, I'd be glad to hear from you.
           </p>
 
           <div className="mt-8 flex flex-wrap gap-4">

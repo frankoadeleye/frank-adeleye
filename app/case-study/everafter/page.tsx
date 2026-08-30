@@ -184,7 +184,7 @@ Cloudinary Media Storage
           </p>
 
           <blockquote className="mt-4 border-l-2 border-zinc-300 pl-6 italic dark:border-zinc-700">
-            Can they verify somebody else&apos;s account?
+            Can they verify somebody else's account?
           </blockquote>
 
           <p className="mt-6 text-zinc-600 dark:text-zinc-400">No.</p>
@@ -198,7 +198,7 @@ Cloudinary Media Storage
 
         <section className="mt-20">
           <h2 className="text-3xl font-semibold">
-            Scenario 2: A user copies another user&apos;s Collection ID
+            Scenario 2: A user copies another user's Collection ID
           </h2>
 
           <p className="mt-6 text-zinc-600 dark:text-zinc-400">
