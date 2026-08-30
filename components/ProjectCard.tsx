@@ -69,18 +69,22 @@ export default function ProjectCard({ project }: ProjectCardProps) {
           href={project.caseStudyUrl}
           data-nav-item
           className="
+            relative
+            overflow-hidden
             rounded-full
             border
-            border-zinc-300
+            border-yellow-400
             px-4
             py-2
-            transition
-            hover:bg-zinc-100
-            dark:border-zinc-700
-            dark:hover:bg-zinc-800
+            font-medium
+            text-yellow-600
+            transition-all
+            hover:scale-105
+            hover:bg-yellow-50
+            dark:hover:bg-yellow-950/20
           "
         >
-          Case Study
+          ⭐ Read Case Study
         </Link>
 
         {project.githubUrl !== "#" && (

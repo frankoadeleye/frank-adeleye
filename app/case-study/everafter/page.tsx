@@ -1,10 +1,13 @@
 import Link from "next/link";
 import ThemeToggle from "@/components/ThemeToggle";
+import GlanceModeToggle from "@/components/GlanceModeToggle";
+import Highlight from "@/components/Highlight";
 
 export default function EverAfterCaseStudyPage() {
   return (
     <main className="min-h-screen bg-white text-black dark:bg-black dark:text-white">
       <div className="fixed right-6 top-6 z-50 lg:right-[calc((100vw-72rem)/2+1.5rem)]">
+        <GlanceModeToggle />
         <ThemeToggle />
       </div>
       <div className="mx-auto max-w-4xl px-6 py-24">
@@ -60,22 +63,18 @@ export default function EverAfterCaseStudyPage() {
         <p className="mt-8 text-lg text-zinc-600 dark:text-zinc-400">
           {" "}
           I wanted to build something that treated{" "}
-          <strong className="font-semibold text-yellow-500 dark:text-yellow-300">
-            {" "}
-            memories as first-class citizens{" "}
-          </strong>{" "}
-          instead of treating photos like disconnected files scattered across
-          folders.{" "}
+          <Highlight> memories as first-class citizens </Highlight> instead of
+          treating photos like disconnected files scattered across folders.{" "}
         </p>
         <p className="mt-6 text-lg text-zinc-600 dark:text-zinc-400">
           Every technical decision in EverAfter - from authentication to
           database relationships - was designed and implemented by me from
           scratch.{" "}
-          <strong className="font-semibold text-yellow-500 dark:text-yellow-300">
+          <Highlight>
             The business rules, architecture, frontend, backend, database
             structure, security model, and deployment decisions were all created
             specifically for this product.
-          </strong>
+          </Highlight>
         </p>
         <section className="mt-20">
           <p className="mb-3 text-sm font-medium uppercase tracking-[0.25em] text-zinc-500 dark:text-zinc-400">
@@ -90,10 +89,10 @@ export default function EverAfterCaseStudyPage() {
             <p>
               {" "}
               EverAfter is a memory preservation platform that allows users to{" "}
-              <strong className="font-semibold text-yellow-500 dark:text-yellow-300">
+              <Highlight>
                 {" "}
                 capture, organize, and revisit meaningful life experiences{" "}
-              </strong>{" "}
+              </Highlight>{" "}
               .{" "}
             </p>
 
@@ -129,10 +128,10 @@ export default function EverAfterCaseStudyPage() {
               belonging to a collection are removed, the collection becomes
               empty and can no longer provide meaningful context. This rule
               influenced several{" "}
-              <strong className="font-semibold text-yellow-500 dark:text-yellow-300">
+              <Highlight>
                 {" "}
                 frontend and backend validation decisions{" "}
-              </strong>{" "}
+              </Highlight>{" "}
               throughout the application.{" "}
             </p>
           </div>
@@ -165,8 +164,10 @@ Cloudinary Media Storage
 
           <div className="mt-8 space-y-4 text-zinc-600 dark:text-zinc-400">
             <p>
-              The application follows a client-server architecture with a React
-              frontend communicating with an Express API.
+              The application follows a{" "}
+              <Highlight>client-server architecture</Highlight> with a React
+              frontend <Highlight>communicating with</Highlight> an{" "}
+              <Highlight>Express API.</Highlight>
             </p>
 
             <p>
@@ -175,9 +176,10 @@ Cloudinary Media Storage
             </p>
 
             <p>
-              TypeScript is used throughout the frontend to improve
-              maintainability, reduce runtime errors, and provide safer
-              refactoring as the project grows.
+              <Highlight>TypeScript</Highlight> is used throughout the frontend
+              to <Highlight>improve maintainability,</Highlight> reduce runtime
+              errors, <Highlight>and</Highlight> provide{" "}
+              <Highlight>safer refactoring</Highlight> as the project grows.
             </p>
           </div>
         </section>
@@ -203,8 +205,11 @@ Cloudinary Media Storage
 
           <p className="mt-4 text-zinc-600 dark:text-zinc-400">
             Verification tokens are tied to the specific user account they were
-            generated for. The backend validates both the user and the token,
-            preventing cross-account verification attempts.
+            generated for. The <Highlight>backend</Highlight> validates both the
+            user and the token,{" "}
+            <Highlight>
+              preventing cross-account verification attempts.
+            </Highlight>
           </p>
         </section>
         <section className="mt-20">
@@ -218,9 +223,9 @@ Cloudinary Media Storage
           </p>
 
           <p className="mt-4 text-zinc-600 dark:text-zinc-400">
-            <strong className="font-semibold text-yellow-500 dark:text-yellow-300">
+            <Highlight>
               Either everything succeeds or everything rolls back.
-            </strong>
+            </Highlight>
           </p>
 
           <p className="mt-4 text-zinc-600 dark:text-zinc-400">
@@ -229,8 +234,9 @@ Cloudinary Media Storage
           </p>
 
           <p className="mt-4 text-zinc-600 dark:text-zinc-400">
-            This prevents an entire class of authorization vulnerabilities often
-            called IDOR attacks.
+            This <Highlight>prevents</Highlight> an entire class of{" "}
+            <Highlight>authorization vulnerabilities</Highlight> often called
+            IDOR attacks.
           </p>
         </section>
         <section className="mt-20">
@@ -257,8 +263,8 @@ Cloudinary Media Storage
           </p>
 
           <p className="mt-4 text-zinc-600 dark:text-zinc-400">
-            This keeps the data model clean and prevents orphaned records from
-            accumulating over time.
+            This <Highlight>keeps the data model clean</Highlight> and prevents
+            orphaned records from accumulating over time.
           </p>
         </section>
         <section className="mt-20">
@@ -305,8 +311,10 @@ Cloudinary Media Storage
           </p>
 
           <p className="mt-4 text-zinc-600 dark:text-zinc-400">
-            To prevent this, I implemented MongoDB transactions around
-            operations that modify multiple related documents.
+            To prevent this,{" "}
+            <Highlight>I implemented MongoDB transactions</Highlight> around
+            operations{" "}
+            <Highlight>that modify multiple related documents.</Highlight>
           </p>
 
           <p className="mt-4 text-zinc-600 dark:text-zinc-400">
@@ -333,16 +341,12 @@ Cloudinary Media Storage
 
           <ul className="mt-6 list-disc space-y-4 pl-6 text-zinc-600 dark:text-zinc-400">
             <li>
-              <strong className="font-semibold text-yellow-500 dark:text-yellow-300">
-                Ownership validation
-              </strong>{" "}
-              on every sensitive operation.
+              <Highlight>Ownership validation</Highlight> on every sensitive
+              operation.
             </li>
 
             <li>
-              <strong className="font-semibold text-yellow-500 dark:text-yellow-300">
-                Password reset tokens stored as hashes.
-              </strong>
+              <Highlight>Password reset tokens stored as hashes.</Highlight>
             </li>
 
             <li>Verification-code replacement and expiration.</li>
@@ -356,7 +360,8 @@ Cloudinary Media Storage
           <h2 className="text-3xl font-semibold">What the project taught me</h2>
 
           <p className="mt-6 text-zinc-600 dark:text-zinc-400">
-            EverAfter pushed me beyond simply building features.
+            EverAfter <Highlight>pushed me</Highlight> beyond simply building
+            features.
           </p>
 
           <p className="mt-4 text-zinc-600 dark:text-zinc-400">

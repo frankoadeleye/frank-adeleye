@@ -1,11 +1,14 @@
 import Link from "next/link";
 import ThemeToggle from "@/components/ThemeToggle";
 import KeyboardNavigation from "@/components/KeyboardNavigation";
+import GlanceModeToggle from "@/components/GlanceModeToggle";
+import Highlight from "@/components/Highlight";
 
 export default function StoryPage() {
   return (
     <main className="min-h-screen bg-white text-black dark:bg-black dark:text-white">
       <div className="fixed right-6 top-6 z-50 lg:right-[calc((100vw-72rem)/2+1.5rem)]">
+        <GlanceModeToggle />
         <ThemeToggle />
       </div>
 
@@ -36,41 +39,45 @@ export default function StoryPage() {
             A little about me
           </p>
 
-          <h1 className="text-5xl font-bold tracking-tight sm:text-6xl">
-            I like figuring out how things work.
+          <h1 className="font-mono text-4xl font-bold tracking-tight sm:text-5xl">
+            $ I sure hope you know what you're doing
           </h1>
 
           <div className="mt-8 max-w-3xl space-y-6 text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            <p>
-              That probably explains my shift toward{" "}
-              <strong className="font-semibold text-yellow-500 dark:text-yellow-300">
-                backend development
-              </strong>{" "}
-              better than anything else.
-            </p>
+            <div className="mt-8 max-w-3xl space-y-6 text-lg leading-8 text-zinc-600 dark:text-zinc-400">
+              <p>
+                I first saw a warning like this years ago while learning React.
+                It was one of those messages that makes you stop for a second
+                and wonder whether you really understand what you're about to
+                do.
+              </p>
 
-            <p>
-              I enjoy the kind of problems where you have to stop, investigate,
-              make sense of what is happening, and then figure out what should
-              happen next.
-              <strong className="font-semibold text-yellow-500 dark:text-yellow-300">
-                {" "}
-                APIs, data, authentication, business logic, and application
-                architecture
-              </strong>{" "}
-              give me plenty of those problems.
-            </p>
+              <p>
+                The funny thing is that the message stuck with me because it
+                feels like a pretty accurate description of software development
+                itself.
+              </p>
 
-            <p>
-              I started out in frontend development, and that experience still
-              helps me a lot. I understand what happens on the other side of an
-              API request and I can comfortably work across the stack. But these
-              days, I find myself more interested in{" "}
-              <strong className="font-semibold text-yellow-500 dark:text-yellow-300">
-                what is happening behind the interface
-              </strong>
-              .
-            </p>
+              <p>
+                The more experience I gain, the less I believe software is about
+                memorizing syntax and the more I believe it's about
+                <Highlight>
+                  {" "}
+                  understanding what you're actually trying to build.
+                </Highlight>{" "}
+                Most of the difficult problems I've encountered weren't caused
+                by typing the wrong code. They happened because the requirements
+                weren't clear, the assumptions weren't questioned, or nobody had
+                fully thought through what should happen next.
+              </p>
+
+              <p>
+                That's probably why I've become increasingly interested in
+                <Highlight> backend development</Highlight>. I enjoy the part
+                where vague ideas have to become concrete rules, reliable
+                systems, and predictable behavior.
+              </p>
+            </div>
           </div>
         </header>
         {/* What I enjoy */}
@@ -87,10 +94,7 @@ export default function StoryPage() {
             <p>
               There is something satisfying about taking a messy requirement and
               turning it into{" "}
-              <strong className="font-semibold text-yellow-500 dark:text-yellow-300">
-                rules that a system can actually follow
-              </strong>
-              .
+              <Highlight>rules that a system can actually follow</Highlight>.
             </p>
 
             <p>
@@ -103,10 +107,10 @@ export default function StoryPage() {
             <p>
               I don't always get those decisions right on the first try. That is
               part of what I enjoy about software.{" "}
-              <strong className="font-semibold text-yellow-500 dark:text-yellow-300">
+              <Highlight>
                 A problem usually gives you another chance to understand it
                 better.
-              </strong>
+              </Highlight>
             </p>
           </div>
         </section>
@@ -123,18 +127,14 @@ export default function StoryPage() {
           <div className="mt-8 space-y-6 text-zinc-600 dark:text-zinc-400">
             <p>
               After spending years working primarily with React and Next.js, I
-              wanted to understand the other side of the application properly.
-              <strong className="font-semibold text-yellow-500 dark:text-yellow-300">
-                So I decided to build something
-              </strong>{" "}
-              where I couldn't just focus on the interface.
+              wanted to understand the other side of the application properly.{" "}
+              <Highlight>So I decided to build something</Highlight> where I
+              couldn't just focus on the interface.
             </p>
 
             <p>
-              <strong className="font-semibold text-yellow-500 dark:text-yellow-300">
-                That became EverAfter,
-              </strong>{" "}
-              a memory-preservation application built with the MERN stack.
+              <Highlight>That became EverAfter,</Highlight> a
+              memory-preservation application built with the MERN stack.
             </p>
 
             <p>
@@ -146,14 +146,10 @@ export default function StoryPage() {
 
             <p>
               More importantly, it changed the questions I ask when I build.{" "}
-              <strong className="font-semibold text-yellow-500 dark:text-yellow-300">
-                I started thinking
-              </strong>{" "}
-              less about whether a feature simply works and{" "}
-              <strong className="font-semibold text-yellow-500 dark:text-yellow-300">
-                more about what should happen
-              </strong>{" "}
-              when someone uses it in a way I didn't expect.
+              <Highlight>I started thinking</Highlight> less about whether a
+              feature simply works and{" "}
+              <Highlight>more about what should happen</Highlight> when someone
+              uses it in a way I didn't expect.
             </p>
 
             <div className="flex flex-wrap gap-4 pt-2">
@@ -214,17 +210,15 @@ export default function StoryPage() {
           <div className="mt-8 space-y-6 text-zinc-600 dark:text-zinc-400">
             <p>
               I studied Mechanical Engineering and started programming seriously
-              in 2019 after completing my diploma.
+              in 2019.
             </p>
 
             <p>
-              <strong className="font-semibold text-yellow-500 dark:text-yellow-300">
-                What hooked me was the feedback loop.
-              </strong>{" "}
-              When something didn't work, I could investigate it, change
-              something, run it again, and see what happened. I liked that
-              problems were not completely mysterious. There was usually
-              something to understand.
+              <Highlight>What hooked me was the feedback loop.</Highlight> When
+              something didn't work, I could investigate it, change something,
+              run it again, and see what happened. I liked that problems were
+              not completely mysterious. There was usually something to
+              understand.
             </p>
 
             <p>
@@ -261,7 +255,8 @@ export default function StoryPage() {
 
           <div className="mt-8 space-y-6 text-zinc-600 dark:text-zinc-400">
             <p>
-              I'm most interested in backend-heavy applications where there are
+              I'm most interested in{" "}
+              <Highlight>backend-heavy applications</Highlight> where there are
               real decisions to make around data, APIs, security, business
               logic, and application architecture.
             </p>
@@ -274,9 +269,10 @@ export default function StoryPage() {
 
             <p>
               And because I came from the frontend, I don't see the interface
-              and the backend as two completely separate worlds. I can build the
-              frontend when I need to, but I increasingly enjoy spending my time
-              thinking about what makes the application work underneath it.
+              and the backend as two completely separate worlds.{" "}
+              <Highlight>I can build the frontend when I need to,</Highlight>{" "}
+              but I increasingly enjoy spending my time thinking about what
+              makes the application work underneath it.
             </p>
           </div>
         </section>
@@ -292,9 +288,9 @@ export default function StoryPage() {
 
           <div className="mt-8 space-y-6 text-zinc-600 dark:text-zinc-400">
             <p>
-              <strong className="font-semibold text-yellow-500 dark:text-yellow-300">
+              <Highlight>
                 I like working with people who are comfortable asking questions.
-              </strong>{" "}
+              </Highlight>{" "}
               Not just &quot;what are we building?&quot;, but &quot;why are we
               building it this way?&quot;
             </p>
@@ -330,9 +326,9 @@ export default function StoryPage() {
 
             <p>
               That means{" "}
-              <strong className="font-semibold text-yellow-500 dark:text-yellow-300">
-                continuing to improve in areas like backend
-              </strong>
+              <Highlight>
+                continuing to improve in areas like backend{" "}
+              </Highlight>
               architecture, API design, data modeling, authentication,
               authorization, performance, and system design.
             </p>

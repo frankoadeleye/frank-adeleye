@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Highlight from "./Highlight";
 
 export default function Hero() {
   return (
@@ -44,27 +45,23 @@ export default function Hero() {
       </h1>
 
       <p className="mt-8 max-w-2xl text-lg leading-8 text-neutral-600 dark:text-neutral-400">
-        I think one of the reasons I{" "}
-        <strong className="font-semibold text-yellow-500 dark:text-yellow-300">
-          fell in love with software
-        </strong>{" "}
-        is that problems are usually trying to tell you something. When
-        something breaks, there's a reason — and I genuinely enjoy figuring out
-        what it is.
+        I strongly believe that
+        <Highlight>
+          {" "}
+          your code is a reflection of how clearly you understand the problem.
+        </Highlight>{" "}
+        The more clarity you have, the simpler the solution usually becomes.
+        That's one of the things I love most about software development.
       </p>
 
       <p className="mt-5 max-w-2xl text-lg leading-8 text-neutral-600 dark:text-neutral-400">
-        These days, that curiosity pulls me more toward the{" "}
-        <strong className="font-semibold text-yellow-500 dark:text-yellow-300">
-          backend
-        </strong>
-        : APIs, data, authentication, business logic, and the decisions that
-        determine how an application actually behaves. I started with React and
-        Next.js, so I'm{" "}
-        <strong className="font-semibold text-yellow-500 dark:text-yellow-300">
-          comfortable across the stack
-        </strong>
-        , but backend development is where I find myself wanting to dig deeper.
+        That's probably why I find myself drawn toward the
+        <Highlight> backend</Highlight> these days. I enjoy turning vague
+        requirements into rules a system can actually follow - designing APIs,
+        modeling data, handling authentication, and deciding what should happen
+        when things don't go according to plan. I started with React and
+        Next.js, so I'm comfortable across the stack, but backend development is
+        where my curiosity naturally keeps pulling me.
       </p>
 
       <div className="mt-8 flex flex-wrap gap-4">
