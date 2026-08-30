@@ -6,7 +6,7 @@ import Highlight from "@/components/Highlight";
 export default function EverAfterCaseStudyPage() {
   return (
     <main className="min-h-screen bg-white text-black dark:bg-black dark:text-white">
-      <div className="fixed right-6 top-6 z-50 lg:right-[calc((100vw-72rem)/2+1.5rem)]">
+      <div className="fixed flex gap-3 right-6 top-6 z-50 lg:right-[calc((100vw-72rem)/2+1.5rem)]">
         <GlanceModeToggle />
         <ThemeToggle />
       </div>
