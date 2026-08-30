@@ -30,7 +30,6 @@ export default function StoryPage() {
         >
           ← Back to Portfolio
         </Link>
-
         {/* Introduction */}
         <header>
           <p className="mb-3 text-sm font-medium uppercase tracking-[0.25em] text-zinc-500 dark:text-zinc-400">
@@ -43,27 +42,37 @@ export default function StoryPage() {
 
           <div className="mt-8 max-w-3xl space-y-6 text-lg leading-8 text-zinc-600 dark:text-zinc-400">
             <p>
-              That probably explains my shift toward backend development better
-              than anything else.
+              That probably explains my shift toward{" "}
+              <strong className="font-semibold text-yellow-500 dark:text-yellow-300">
+                backend development
+              </strong>{" "}
+              better than anything else.
             </p>
 
             <p>
               I enjoy the kind of problems where you have to stop, investigate,
               make sense of what is happening, and then figure out what should
-              happen next. APIs, data, authentication, business logic, and
-              application architecture give me plenty of those problems.
+              happen next.
+              <strong className="font-semibold text-yellow-500 dark:text-yellow-300">
+                {" "}
+                APIs, data, authentication, business logic, and application
+                architecture
+              </strong>{" "}
+              give me plenty of those problems.
             </p>
 
             <p>
               I started out in frontend development, and that experience still
               helps me a lot. I understand what happens on the other side of an
               API request and I can comfortably work across the stack. But these
-              days, I find myself more interested in what is happening behind
-              the interface.
+              days, I find myself more interested in{" "}
+              <strong className="font-semibold text-yellow-500 dark:text-yellow-300">
+                what is happening behind the interface
+              </strong>
+              .
             </p>
           </div>
         </header>
-
         {/* What I enjoy */}
         <section className="mt-24">
           <p className="mb-3 text-sm font-medium uppercase tracking-[0.25em] text-zinc-500 dark:text-zinc-400">
@@ -77,7 +86,11 @@ export default function StoryPage() {
           <div className="mt-8 space-y-6 text-zinc-600 dark:text-zinc-400">
             <p>
               There is something satisfying about taking a messy requirement and
-              turning it into rules that a system can actually follow.
+              turning it into{" "}
+              <strong className="font-semibold text-yellow-500 dark:text-yellow-300">
+                rules that a system can actually follow
+              </strong>
+              .
             </p>
 
             <p>
@@ -89,12 +102,14 @@ export default function StoryPage() {
 
             <p>
               I don&apos;t always get those decisions right on the first try.
-              That is part of what I enjoy about software. A problem usually
-              gives you another chance to understand it better.
+              That is part of what I enjoy about software.{" "}
+              <strong className="font-semibold text-yellow-500 dark:text-yellow-300">
+                A problem usually gives you another chance to understand it
+                better.
+              </strong>
             </p>
           </div>
         </section>
-
         {/* EverAfter */}
         <section className="mt-24">
           <p className="mb-3 text-sm font-medium uppercase tracking-[0.25em] text-zinc-500 dark:text-zinc-400">
@@ -177,7 +192,6 @@ export default function StoryPage() {
             </div>
           </div>
         </section>
-
         {/* How I got here */}
         <section className="mt-24">
           <p className="mb-3 text-sm font-medium uppercase tracking-[0.25em] text-zinc-500 dark:text-zinc-400">
@@ -223,7 +237,6 @@ export default function StoryPage() {
             </p>
           </div>
         </section>
-
         {/* What I enjoy building */}
         <section className="mt-24">
           <p className="mb-3 text-sm font-medium uppercase tracking-[0.25em] text-zinc-500 dark:text-zinc-400">
@@ -256,7 +269,6 @@ export default function StoryPage() {
             </p>
           </div>
         </section>
-
         {/* Work environment */}
         <section className="mt-24">
           <p className="mb-3 text-sm font-medium uppercase tracking-[0.25em] text-zinc-500 dark:text-zinc-400">
@@ -287,7 +299,6 @@ export default function StoryPage() {
             </p>
           </div>
         </section>
-
         {/* Growth */}
         <section className="mt-24">
           <p className="mb-3 text-sm font-medium uppercase tracking-[0.25em] text-zinc-500 dark:text-zinc-400">
@@ -318,7 +329,6 @@ export default function StoryPage() {
             </p>
           </div>
         </section>
-
         {/* Contact */}
         <section className="mt-24 border-t border-zinc-200 pt-12 dark:border-zinc-800">
           <h2 className="text-3xl font-semibold tracking-tight">

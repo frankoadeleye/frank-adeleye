@@ -44,17 +44,27 @@ export default function Hero() {
       </h1>
 
       <p className="mt-8 max-w-2xl text-lg leading-8 text-neutral-600 dark:text-neutral-400">
-        I think one of the reasons I fell in love with software is that problems
-        are usually trying to tell you something. When something breaks, there's
-        a reason - and I genuinely enjoy figuring out what it is.
+        I think one of the reasons I{" "}
+        <strong className="font-semibold text-yellow-500 dark:text-yellow-300">
+          fell in love with software
+        </strong>{" "}
+        is that problems are usually trying to tell you something. When
+        something breaks, there's a reason — and I genuinely enjoy figuring out
+        what it is.
       </p>
 
       <p className="mt-5 max-w-2xl text-lg leading-8 text-neutral-600 dark:text-neutral-400">
-        These days, that curiosity pulls me more toward the backend: APIs, data,
-        authentication, business logic, and the decisions that determine how an
-        application actually behaves. I started with React and Next.js, so I'm
-        comfortable across the stack, but backend development is where I find
-        myself wanting to dig deeper.
+        These days, that curiosity pulls me more toward the{" "}
+        <strong className="font-semibold text-yellow-500 dark:text-yellow-300">
+          backend
+        </strong>
+        : APIs, data, authentication, business logic, and the decisions that
+        determine how an application actually behaves. I started with React and
+        Next.js, so I'm{" "}
+        <strong className="font-semibold text-yellow-500 dark:text-yellow-300">
+          comfortable across the stack
+        </strong>
+        , but backend development is where I find myself wanting to dig deeper.
       </p>
 
       <div className="mt-8 flex flex-wrap gap-4">

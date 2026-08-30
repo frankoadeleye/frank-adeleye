@@ -29,7 +29,6 @@ export default function EverAfterCaseStudyPage() {
         >
           ← Back to Portfolio
         </Link>
-
         <p className="mb-3 text-sm uppercase tracking-[0.25em] text-zinc-500">
           Case Study
         </p>
@@ -54,25 +53,30 @@ export default function EverAfterCaseStudyPage() {
             MongoDB
           </span>
         </div>
-
         <h1 className="text-5xl font-bold tracking-tight">
-          What was I thinking when I came up with EverAfter?
-        </h1>
-
+          {" "}
+          What was I thinking when I came up with EverAfter?{" "}
+        </h1>{" "}
         <p className="mt-8 text-lg text-zinc-600 dark:text-zinc-400">
-          I wanted to build something that treated memories as first-class
-          citizens instead of treating photos like disconnected files scattered
-          across folders.
+          {" "}
+          I wanted to build something that treated{" "}
+          <strong className="font-semibold text-yellow-500 dark:text-yellow-300">
+            {" "}
+            memories as first-class citizens{" "}
+          </strong>{" "}
+          instead of treating photos like disconnected files scattered across
+          folders.{" "}
         </p>
-
         <p className="mt-6 text-lg text-zinc-600 dark:text-zinc-400">
           Every technical decision in EverAfter - from authentication to
           database relationships - was designed and implemented by me from
-          scratch. The business rules, architecture, frontend, backend, database
-          structure, security model, and deployment decisions were all created
-          specifically for this product.
+          scratch.{" "}
+          <strong className="font-semibold text-yellow-500 dark:text-yellow-300">
+            The business rules, architecture, frontend, backend, database
+            structure, security model, and deployment decisions were all created
+            specifically for this product.
+          </strong>
         </p>
-
         <section className="mt-20">
           <p className="mb-3 text-sm font-medium uppercase tracking-[0.25em] text-zinc-500 dark:text-zinc-400">
             Product Overview
@@ -84,8 +88,13 @@ export default function EverAfterCaseStudyPage() {
 
           <div className="mt-8 space-y-6 text-zinc-600 dark:text-zinc-400">
             <p>
-              EverAfter is a memory preservation platform that allows users to
-              capture, organize, and revisit meaningful life experiences.
+              {" "}
+              EverAfter is a memory preservation platform that allows users to{" "}
+              <strong className="font-semibold text-yellow-500 dark:text-yellow-300">
+                {" "}
+                capture, organize, and revisit meaningful life experiences{" "}
+              </strong>{" "}
+              .{" "}
             </p>
 
             <p>
@@ -115,15 +124,19 @@ export default function EverAfterCaseStudyPage() {
             </div>
 
             <p>
+              {" "}
               A collection must contain at least one memory. If all memories
               belonging to a collection are removed, the collection becomes
               empty and can no longer provide meaningful context. This rule
-              influenced several frontend and backend validation decisions
-              throughout the application.
+              influenced several{" "}
+              <strong className="font-semibold text-yellow-500 dark:text-yellow-300">
+                {" "}
+                frontend and backend validation decisions{" "}
+              </strong>{" "}
+              throughout the application.{" "}
             </p>
           </div>
         </section>
-
         <section className="mt-24">
           <p className="mb-3 text-sm font-medium uppercase tracking-[0.25em] text-zinc-500 dark:text-zinc-400">
             Architecture
@@ -168,7 +181,6 @@ Cloudinary Media Storage
             </p>
           </div>
         </section>
-
         <section className="mt-24">
           <h2 className="text-3xl font-semibold">
             Scenario 1: Someone gets your verification code
@@ -195,7 +207,6 @@ Cloudinary Media Storage
             preventing cross-account verification attempts.
           </p>
         </section>
-
         <section className="mt-20">
           <h2 className="text-3xl font-semibold">
             Scenario 2: A user copies another user's Collection ID
@@ -207,7 +218,9 @@ Cloudinary Media Storage
           </p>
 
           <p className="mt-4 text-zinc-600 dark:text-zinc-400">
-            EverAfter checks ownership as part of every important query.
+            <strong className="font-semibold text-yellow-500 dark:text-yellow-300">
+              Either everything succeeds or everything rolls back.
+            </strong>
           </p>
 
           <p className="mt-4 text-zinc-600 dark:text-zinc-400">
@@ -220,7 +233,6 @@ Cloudinary Media Storage
             called IDOR attacks.
           </p>
         </section>
-
         <section className="mt-20">
           <h2 className="text-3xl font-semibold">
             Scenario 3: A memory moves and leaves a collection empty
@@ -249,7 +261,6 @@ Cloudinary Media Storage
             accumulating over time.
           </p>
         </section>
-
         <section className="mt-20">
           <h2 className="text-3xl font-semibold">
             Why I rejected collection.memoryIds
@@ -278,7 +289,6 @@ Cloudinary Media Storage
             contents from memory queries.
           </p>
         </section>
-
         <section className="mt-20">
           <h2 className="text-3xl font-semibold">
             Preventing half-finished database states
@@ -303,7 +313,6 @@ Cloudinary Media Storage
             Either everything succeeds or everything rolls back.
           </p>
         </section>
-
         <section className="mt-20">
           <h2 className="text-3xl font-semibold">Performance decisions</h2>
 
@@ -319,19 +328,30 @@ Cloudinary Media Storage
             <li>User-specific state reset during logout.</li>
           </ul>
         </section>
-
         <section className="mt-20">
           <h2 className="text-3xl font-semibold">Security decisions</h2>
 
           <ul className="mt-6 list-disc space-y-4 pl-6 text-zinc-600 dark:text-zinc-400">
-            <li>Ownership validation on every sensitive operation.</li>
-            <li>Password reset tokens stored as hashes.</li>
+            <li>
+              <strong className="font-semibold text-yellow-500 dark:text-yellow-300">
+                Ownership validation
+              </strong>{" "}
+              on every sensitive operation.
+            </li>
+
+            <li>
+              <strong className="font-semibold text-yellow-500 dark:text-yellow-300">
+                Password reset tokens stored as hashes.
+              </strong>
+            </li>
+
             <li>Verification-code replacement and expiration.</li>
+
             <li>Generic error responses to avoid leaking information.</li>
+
             <li>Authenticated identity derived from server-side validation.</li>
           </ul>
         </section>
-
         <section className="mt-20">
           <h2 className="text-3xl font-semibold">What the project taught me</h2>
 
@@ -351,7 +371,6 @@ Cloudinary Media Storage
             frontend.
           </p>
         </section>
-
         <section className="mt-24">
           <p className="mb-3 text-sm font-medium uppercase tracking-[0.25em] text-zinc-500 dark:text-zinc-400">
             Engineering Challenges
