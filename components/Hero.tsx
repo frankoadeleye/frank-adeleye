@@ -2,7 +2,19 @@ import Link from "next/link";
 
 export default function Hero() {
   return (
-    <section className="max-w-3xl">
+    <section
+      data-nav-item
+      className="
+        max-w-3xl
+        rounded-2xl
+        border
+        border-dashed
+        border-zinc-300
+        p-6
+        dark:border-zinc-700
+        sm:p-8
+      "
+    >
       <p className="mb-4 text-sm font-medium uppercase tracking-[0.25em] text-neutral-500 dark:text-neutral-400">
         Frontend & Full-Stack Developer
       </p>
@@ -20,7 +32,7 @@ export default function Hero() {
         I started in frontend development with React and Next.js and have since
         expanded into backend development with TypeScript, Node.js, Express, and
         MongoDB. I enjoy understanding how the pieces of an application fit
-        together - not just making the interface work.
+        together — not just making the interface work.
       </p>
 
       <div className="mt-8 flex flex-wrap gap-4">
@@ -66,7 +78,6 @@ export default function Hero() {
         </a>
       </div>
 
-      {/* Keyboard navigation hint */}
       <div className="mt-8 hidden items-center gap-2 text-sm text-neutral-400 dark:text-neutral-500 lg:flex">
         <span aria-hidden="true">💡</span>
 

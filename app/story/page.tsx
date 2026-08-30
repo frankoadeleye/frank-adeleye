@@ -277,7 +277,7 @@ export default function StoryPage() {
               Read the EverAfter case study →
             </Link>
             <Link
-              href="https://enterprise-auth-system-3y2i.onrender.com"
+              href="https://everafter-ocel.onrender.com"
               data-nav-item
               className="
             mb-12
