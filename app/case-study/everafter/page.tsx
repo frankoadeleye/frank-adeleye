@@ -68,12 +68,10 @@ export default function EverAfterCaseStudyPage() {
         <p className="mt-6 text-lg text-zinc-600 dark:text-zinc-400">
           Every technical decision in EverAfter - from authentication to
           database relationships - was designed and implemented by me from
-          scratch.{" "}
-          <Highlight>
-            The business rules, architecture, frontend, backend, database
-            structure, security model, and deployment decisions were all created
-            specifically for this product.
-          </Highlight>
+          scratch. <Highlight>The business rules, </Highlight> architecture,
+          frontend, backend, <Highlight>database structure,</Highlight> security
+          model, and deployment decisions were all{" "}
+          <Highlight>created specifically for this product.</Highlight>
         </p>
         <section className="mt-20">
           <p className="mb-3 text-sm font-medium uppercase tracking-[0.25em] text-zinc-500 dark:text-zinc-400">

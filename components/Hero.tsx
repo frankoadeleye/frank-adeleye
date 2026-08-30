@@ -56,12 +56,12 @@ export default function Hero() {
 
       <p className="mt-5 max-w-2xl text-lg leading-8 text-neutral-600 dark:text-neutral-400">
         That's probably why I find myself <Highlight>drawn toward</Highlight>{" "}
-        the backend these days. I enjoy turning vague requirements into rules a
-        system can actually follow - designing APIs, modeling data, handling
-        authentication, and deciding what should happen when things don't go
-        according to plan. I started with React and Next.js, so{" "}
-        <Highlight>I'm comfortable across the stack,</Highlight> but backend
-        development is where my curiosity naturally keeps pulling me.
+        the <Highlight>backend</Highlight> these days. I enjoy turning vague
+        requirements into rules a system can actually follow - designing APIs,
+        modeling data, handling authentication, and deciding what should happen
+        when things don't go according to plan. I started with React and
+        Next.js, so <Highlight>I'm comfortable across the stack,</Highlight> but
+        backend development is where my curiosity naturally keeps pulling me.
       </p>
 
       <div className="mt-8 flex flex-wrap gap-4">
