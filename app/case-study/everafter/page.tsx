@@ -14,7 +14,6 @@ export default function EverAfterCaseStudyPage() {
         {/* Back to portfolio */}
         <Link
           href="/"
-          data-nav-item
           className="
             mb-12
             inline-flex
@@ -439,7 +438,6 @@ Cloudinary Media Storage
         {/* Back to portfolio */}
         <Link
           href="/"
-          data-nav-item
           className="
             mb-12
             inline-flex

@@ -15,7 +15,6 @@ export default function StoryPage() {
       <div className="mx-auto max-w-4xl px-6 py-24">
         <Link
           href="/"
-          data-nav-item
           className="
             mb-12
             inline-flex
@@ -40,7 +39,7 @@ export default function StoryPage() {
           </p>
 
           <h1 className="font-mono text-4xl font-bold tracking-tight sm:text-5xl">
-            $ I sure hope you know what you're doing
+            <i>'I sure hope you know what you're doing'</i>
           </h1>
 
           <div className="mt-8 max-w-3xl space-y-6 text-lg leading-8 text-zinc-600 dark:text-zinc-400">
@@ -53,8 +52,9 @@ export default function StoryPage() {
               </p>
 
               <p>
-                The funny thing is that the message stuck with me because it
-                feels like a pretty accurate description of software development
+                The funny thing is that the{" "}
+                <Highlight>message stuck with me</Highlight> because it feels
+                like a pretty accurate description of software development
                 itself.
               </p>
 
@@ -69,13 +69,6 @@ export default function StoryPage() {
                 by typing the wrong code. They happened because the requirements
                 weren't clear, the assumptions weren't questioned, or nobody had
                 fully thought through what should happen next.
-              </p>
-
-              <p>
-                That's probably why I've become increasingly interested in
-                <Highlight> backend development</Highlight>. I enjoy the part
-                where vague ideas have to become concrete rules, reliable
-                systems, and predictable behavior.
               </p>
             </div>
           </div>
@@ -98,7 +91,7 @@ export default function StoryPage() {
             </p>
 
             <p>
-              I like thinking about what data should look like, what an API
+              Having to think about what data should look like, what an API
               should allow, what happens when someone sends something they
               shouldn't, how authentication and authorization should work, and
               what the application should do when things go wrong.
@@ -155,7 +148,6 @@ export default function StoryPage() {
             <div className="flex flex-wrap gap-4 pt-2">
               <Link
                 href="/case-study/everafter"
-                data-nav-item
                 className="
                   inline-flex
                   rounded-full
@@ -177,7 +169,6 @@ export default function StoryPage() {
                 href="https://everafter-ocel.onrender.com"
                 target="_blank"
                 rel="noopener noreferrer"
-                data-nav-item
                 className="
                    relative
                     overflow-hidden
@@ -304,9 +295,10 @@ export default function StoryPage() {
             </p>
 
             <p>
-              I also appreciate teams where engineers have room to think and
-              take ownership, while still being willing to listen, change their
-              minds, and make practical trade-offs.
+              I also <Highlight>appreciate</Highlight> teams where engineers
+              have <Highlight>room to think</Highlight> and take ownership,
+              while still being willing to listen, change their minds,{" "}
+              <Highlight>and make practical trade-offs.</Highlight>
             </p>
           </div>
         </section>
@@ -327,12 +319,10 @@ export default function StoryPage() {
             </p>
 
             <p>
-              That means{" "}
-              <Highlight>
-                continuing to improve in areas like backend{" "}
-              </Highlight>
-              architecture, API design, data modeling, authentication,
-              authorization, performance, and system design.
+              That means <Highlight>continuing to improve in</Highlight> areas
+              like backend <Highlight>architecture,</Highlight> API design, data
+              modeling, authentication, authorization, performance,{" "}
+              <Highlight>and system design.</Highlight>
             </p>
 
             <p>
@@ -357,7 +347,6 @@ export default function StoryPage() {
           <div className="mt-8 flex flex-wrap gap-4">
             <a
               href="mailto:YOUR_EMAIL@example.com"
-              data-nav-item
               className="
                 inline-flex
                 rounded-full
@@ -378,7 +367,6 @@ export default function StoryPage() {
 
             <Link
               href="/"
-              data-nav-item
               className="
                 inline-flex
                 rounded-full
