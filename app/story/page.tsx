@@ -259,6 +259,7 @@ export default function StoryPage() {
               data-nav-item
               className="
             mb-12
+            mr-10
             inline-flex
             rounded-full
             border
@@ -266,6 +267,7 @@ export default function StoryPage() {
             px-4
             py-2
             text-sm
+            text-white
             transition
             hover:bg-zinc-100
             dark:border-zinc-700
@@ -286,6 +288,7 @@ export default function StoryPage() {
             px-4
             py-2
             text-sm
+            text-white
             transition
             hover:bg-zinc-100
             dark:border-zinc-700
