@@ -12,7 +12,7 @@ export default function KeyboardNavigation() {
 
     if (!items.length) return;
 
-    const updateFocus = (index: number) => {
+    const updateFocus = (index: number, shouldScroll = false) => {
       items.forEach((item) => {
         item.classList.remove(
           "ring-2",
@@ -35,16 +35,18 @@ export default function KeyboardNavigation() {
         "dark:ring-offset-black",
       );
 
-      current.scrollIntoView({
-        behavior: "smooth",
-        block: "center",
-      });
+      if (shouldScroll) {
+        current.scrollIntoView({
+          behavior: "smooth",
+          block: "center",
+        });
+      }
     };
 
+    // Highlight the first navigation item without scrolling.
     updateFocus(activeIndex);
 
     const handleKeyDown = (event: KeyboardEvent) => {
-      // Don't hijack arrow keys while typing in an input or textarea.
       const target = event.target as HTMLElement;
 
       if (
@@ -61,7 +63,7 @@ export default function KeyboardNavigation() {
         setActiveIndex((currentIndex) => {
           const nextIndex = Math.min(currentIndex + 1, items.length - 1);
 
-          updateFocus(nextIndex);
+          updateFocus(nextIndex, true);
 
           return nextIndex;
         });
@@ -73,7 +75,7 @@ export default function KeyboardNavigation() {
         setActiveIndex((currentIndex) => {
           const previousIndex = Math.max(currentIndex - 1, 0);
 
-          updateFocus(previousIndex);
+          updateFocus(previousIndex, true);
 
           return previousIndex;
         });

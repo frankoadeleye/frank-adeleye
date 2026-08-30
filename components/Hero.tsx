@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <section className="max-w-3xl">
       <p className="mb-4 text-sm font-medium uppercase tracking-[0.25em] text-neutral-500 dark:text-neutral-400">
-        TypeScript & Node.js Developer
+        Frontend & Full-Stack Developer
       </p>
 
       <h1 className="text-5xl font-semibold tracking-tight sm:text-6xl">
@@ -18,9 +18,9 @@ export default function Hero() {
 
       <p className="mt-5 max-w-2xl text-lg leading-8 text-neutral-600 dark:text-neutral-400">
         I started in frontend development with React and Next.js and have since
-        expanded into backend development with Node.js, Express, and MongoDB. I
-        enjoy understanding how the pieces of an application fit together - not
-        just making the interface work.
+        expanded into backend development with TypeScript, Node.js, Express, and
+        MongoDB. I enjoy understanding how the pieces of an application fit
+        together - not just making the interface work.
       </p>
 
       <div className="mt-8 flex flex-wrap gap-4">
@@ -43,7 +43,7 @@ export default function Hero() {
             dark:hover:bg-zinc-800
           "
         >
-          More about my journey →
+          A little about me →
         </Link>
 
         <a
@@ -64,6 +64,17 @@ export default function Hero() {
         >
           View my work ↓
         </a>
+      </div>
+
+      {/* Keyboard navigation hint */}
+      <div className="mt-8 hidden items-center gap-2 text-sm text-neutral-400 dark:text-neutral-500 lg:flex">
+        <span aria-hidden="true">💡</span>
+
+        <span>
+          Use <kbd className="mx-1 font-medium">←</kbd>
+          <kbd className="font-medium">→</kbd> to navigate and{" "}
+          <kbd className="font-medium">Enter</kbd> to open
+        </span>
       </div>
     </section>
   );
