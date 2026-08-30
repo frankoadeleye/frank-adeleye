@@ -258,22 +258,41 @@ export default function StoryPage() {
               href="/case-study/everafter"
               data-nav-item
               className="
-                mt-2
-                inline-flex
-                rounded-full
-                border
-                border-zinc-300
-                px-5
-                py-2.5
-                text-sm
-                font-medium
-                transition
-                hover:bg-zinc-100
-                dark:border-zinc-700
-                dark:hover:bg-zinc-800
-              "
+            mb-12
+            inline-flex
+            rounded-full
+            border
+            border-zinc-300
+            px-4
+            py-2
+            text-sm
+            transition
+            hover:bg-zinc-100
+            dark:border-zinc-700
+            dark:hover:bg-zinc-800
+          "
             >
               Read the EverAfter case study →
+            </Link>
+            <Link
+              href="https://enterprise-auth-system-3y2i.onrender.com"
+              data-nav-item
+              className="
+            mb-12
+            inline-flex
+            rounded-full
+            border
+            border-zinc-300
+            px-4
+            py-2
+            text-sm
+            transition
+            hover:bg-zinc-100
+            dark:border-zinc-700
+            dark:hover:bg-zinc-800
+          "
+            >
+              See EverAfter in action →
             </Link>
           </div>
         </section>
