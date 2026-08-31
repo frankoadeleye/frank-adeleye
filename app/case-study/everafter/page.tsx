@@ -362,15 +362,19 @@ Cloudinary Media Storage
           </p>
 
           <p className="mt-4 text-zinc-600 dark:text-zinc-400">
-            It forced me to think about business rules, data integrity,
-            transaction safety, security, API contracts, state management,
-            ownership validation, and long-term maintainability.
+            It forced me <Highlight>to think about business rules,</Highlight>
+            data integrity, transaction safety, <Highlight>
+              security,
+            </Highlight>{" "}
+            API contracts, state management, ownership validation,{" "}
+            <Highlight>and</Highlight> long-term maintainability.
           </p>
 
           <p className="mt-4 text-zinc-600 dark:text-zinc-400">
-            More importantly, it taught me how to translate product ideas into
-            enforceable technical rules instead of relying on assumptions in the
-            frontend.
+            More importantly, it taught me{" "}
+            <Highlight>how to translate product ideas into</Highlight>
+            enforceable <Highlight>technical rules</Highlight> instead of
+            relying on assumptions in the frontend.
           </p>
         </section>
         <section className="mt-24">
