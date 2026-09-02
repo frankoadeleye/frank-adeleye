@@ -181,6 +181,139 @@ Cloudinary Media Storage
           </div>
         </section>
         <section className="mt-24">
+          <p className="mb-3 text-sm font-medium uppercase tracking-[0.25em] text-zinc-500 dark:text-zinc-400">
+            Architecture Deep Dive
+          </p>
+
+          <h2 className="text-3xl font-semibold tracking-tight">
+            Designing Safe Account Deletion
+          </h2>
+
+          <div className="mt-8 space-y-6 text-zinc-600 dark:text-zinc-400">
+            <p>
+              One of the most interesting engineering challenges in EverAfter
+              was designing an account deletion system that balances{" "}
+              <Highlight>user control</Highlight> with{" "}
+              <Highlight>data safety</Highlight>.
+            </p>
+
+            <p>
+              Most applications permanently delete accounts immediately. I
+              intentionally rejected that approach because{" "}
+              <Highlight>accidental account deletion</Highlight> is one of the
+              few actions that can cause <Highlight>irreversible</Highlight>{" "}
+              data <Highlight>loss.</Highlight>
+            </p>
+
+            <div className="rounded-xl border border-zinc-200 p-6 dark:border-zinc-800">
+              <pre className="overflow-x-auto text-sm">
+                {`
+Delete Account
+      ↓
+Schedule Deletion
+      ↓
+48-Hour Recovery Window
+      ↓
+Recovery OR Permanent Cleanup
+`}
+              </pre>
+            </div>
+
+            <p>
+              <Highlight>Instead</Highlight> of deleting data instantly,
+              <Highlight>EverAfter performs</Highlight> a{" "}
+              <Highlight>soft-delete</Highlight> by storing a{" "}
+              <Highlight>deletionScheduledFor</Highlight> timestamp. During this
+              recovery window, no memories, collections, or photos are removed.
+            </p>
+
+            <p>
+              Users immediately lose access to the application and are
+              redirected into a dedicated recovery experience, preventing
+              further modifications while still allowing account restoration.
+            </p>
+
+            <div className="rounded-xl border border-zinc-200 p-6 dark:border-zinc-800">
+              <pre className="overflow-x-auto text-sm">
+                {`
+verifyToken
+      ↓
+checkAccountStatus
+      ↓
+Controller
+`}
+              </pre>
+            </div>
+
+            <p>
+              Frontend protection alone is never trusted. Every protected{" "}
+              <Highlight>API</Highlight>
+              request <Highlight>passes</Highlight> through backend{" "}
+              <Highlight>middleware</Highlight>
+              that validates account status before any business logic executes.
+            </p>
+
+            <p>
+              This means even if someone bypasses the UI and manually calls
+              protected endpoints, requests are still blocked server-side.
+            </p>
+
+            <p>If the user changes their mind, recovery is instant:</p>
+
+            <div className="rounded-xl border border-zinc-200 p-6 dark:border-zinc-800">
+              <pre className="overflow-x-auto text-sm">
+                {`
+Recover Account
+      ↓
+deletionScheduledFor = null
+      ↓
+Access Restored
+`}
+              </pre>
+            </div>
+
+            <p>
+              Because no data has been deleted yet, recovery requires no
+              backups, migrations, or restoration process. The system simply
+              clears a timestamp and restores full access.
+            </p>
+
+            <p>
+              After the recovery window expires, a scheduled backend job
+              performs the final cleanup process:
+            </p>
+
+            <div className="rounded-xl border border-zinc-200 p-6 dark:border-zinc-800">
+              <pre className="overflow-x-auto text-sm">
+                {`
+Delete Photos
+      ↓
+Delete Memories
+      ↓
+Delete Collections
+      ↓
+Delete User
+`}
+              </pre>
+            </div>
+
+            <p>
+              The cleanup pipeline intentionally deletes resources in dependency
+              order, preventing <Highlight>orphaned database records</Highlight>{" "}
+              and <Highlight>leaked Cloudinary assets</Highlight>.
+            </p>
+
+            <p>
+              The result is a deletion system built around{" "}
+              <Highlight>defense in depth</Highlight>,{" "}
+              <Highlight>recovery safety</Highlight>,{" "}
+              <Highlight>API bypass protection</Highlight>, and{" "}
+              <Highlight>data integrity</Highlight> rather than simply removing
+              records from a database.
+            </p>
+          </div>
+        </section>
+        <section className="mt-24">
           <h2 className="text-3xl font-semibold">
             Scenario 1: Someone gets your verification code
           </h2>
@@ -372,7 +505,7 @@ Cloudinary Media Storage
 
           <p className="mt-4 text-zinc-600 dark:text-zinc-400">
             More importantly, it taught me{" "}
-            <Highlight>how to translate product ideas into</Highlight>
+            <Highlight>how to translate product ideas into </Highlight>
             enforceable <Highlight>technical rules</Highlight> instead of
             relying on assumptions in the frontend.
           </p>
