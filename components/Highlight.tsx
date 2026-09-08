@@ -11,7 +11,7 @@ export default function Highlight({ children }: { children: ReactNode }) {
       className={
         enabled
           ? "font-semibold text-yellow-500 dark:text-yellow-300"
-          : "font-semibold"
+          : "font-normal"
       }
     >
       {children}
