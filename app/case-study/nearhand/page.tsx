@@ -40,54 +40,41 @@ export default function NearHandCaseStudyPage() {
         </p>
 
         <div className="mb-6 mt-8 flex flex-wrap gap-3">
-          <span className="rounded-full border border-zinc-200 px-4 py-2 text-sm dark:border-zinc-800">
-            Full Stack
-          </span>
-
-          <span className="rounded-full border border-zinc-200 px-4 py-2 text-sm dark:border-zinc-800">
-            Node.js
-          </span>
-
-          <span className="rounded-full border border-zinc-200 px-4 py-2 text-sm dark:border-zinc-800">
-            TypeScript
-          </span>
-
-          <span className="rounded-full border border-zinc-200 px-4 py-2 text-sm dark:border-zinc-800">
-            PostgreSQL
-          </span>
-
-          <span className="rounded-full border border-zinc-200 px-4 py-2 text-sm dark:border-zinc-800">
-            Prisma
-          </span>
-
-          <span className="rounded-full border border-zinc-200 px-4 py-2 text-sm dark:border-zinc-800">
-            React
-          </span>
-
-          <span className="rounded-full border border-zinc-200 px-4 py-2 text-sm dark:border-zinc-800">
-            Paystack
-          </span>
+          {[
+            "Full Stack",
+            "Node.js",
+            "TypeScript",
+            "PostgreSQL",
+            "Prisma",
+            "React",
+            "Paystack",
+          ].map((technology) => (
+            <span
+              key={technology}
+              className="rounded-full border border-zinc-200 px-4 py-2 text-sm dark:border-zinc-800"
+            >
+              {technology}
+            </span>
+          ))}
         </div>
 
         <h1 className="text-5xl font-bold tracking-tight">
-          What happens when you need someone physically present somewhere you
-          are not?
+          Building a marketplace around real-world execution
         </h1>
 
         <p className="mt-8 text-lg text-zinc-600 dark:text-zinc-400">
           NearHand started from a simple real-world problem: many tasks cannot
           be completed through a website or delivery service alone. Sometimes
-          you need a <Highlight>trusted person on the ground</Highlight> who can
-          physically execute the task for you.
+          you need a <Highlight>trusted person physically present</Highlight> to
+          execute something on your behalf.
         </p>
 
         <p className="mt-6 text-lg text-zinc-600 dark:text-zinc-400">
-          I designed NearHand as a{" "}
-          <Highlight>trust-first marketplace</Highlight> connecting people who
-          need real-world tasks completed with people who can perform them. The
-          product, architecture, business rules, database design, API, payment
-          flow, frontend, security model, and deployment were{" "}
-          <Highlight>designed and implemented end to end</Highlight>.
+          I designed NearHand as a marketplace connecting people who need
+          physical tasks completed with people who can perform them. The product
+          architecture, business rules, database design, API, frontend, security
+          model, payment integration, deployment, and production debugging were{" "}
+          <Highlight>implemented end to end</Highlight>.
         </p>
 
         {/* Product Overview */}
@@ -104,17 +91,18 @@ export default function NearHandCaseStudyPage() {
             <p>
               NearHand is a marketplace for{" "}
               <Highlight>real-world tasks</Highlight>. Instead of connecting a
-              customer to a product, NearHand connects a customer to a person
-              who can physically act on their behalf.
+              customer only to a product, the platform connects a customer to
+              someone who can physically act on their behalf.
             </p>
 
             <p>
               The initial product direction focuses on practical errands such as
-              purchasing items from local markets, but the underlying platform
-              is intentionally broader.
+              purchasing items from local markets, while the underlying platform
+              is designed around a broader category of{" "}
+              <Highlight>local physical assistance</Highlight>.
             </p>
 
-            <p>Examples include:</p>
+            <p>Potential task categories include:</p>
 
             <ul className="list-disc space-y-2 pl-6">
               <li>Purchasing items from a local market</li>
@@ -126,20 +114,18 @@ export default function NearHandCaseStudyPage() {
               </li>
             </ul>
 
-            <p>The core idea is simple:</p>
+            <p>The underlying product concept is:</p>
 
             <div className="rounded-xl border border-zinc-200 p-6 dark:border-zinc-800">
               <code className="text-sm">
-                Client → NearHand → Trusted Runner → Real-World Execution
+                Client → NearHand → Local Runner → Real-World Execution
               </code>
             </div>
 
             <p>
-              This makes NearHand less about online shopping and more about{" "}
-              <Highlight>
-                proximity, trust, accountability, and execution
-              </Highlight>
-              .
+              This makes NearHand less about conventional online shopping and
+              more about{" "}
+              <Highlight>connecting people to physical execution</Highlight>.
             </p>
           </div>
         </section>
@@ -149,9 +135,9 @@ export default function NearHandCaseStudyPage() {
           <h3 className="text-2xl font-semibold">The Product Experience</h3>
 
           <p className="mt-4 text-zinc-600 dark:text-zinc-400">
-            The landing experience communicates the two primary actions:
-            <Highlight>request a task</Highlight> or{" "}
-            <Highlight>earn by completing tasks</Highlight>.
+            The landing experience communicates the platform's two primary
+            directions: <Highlight>requesting a task</Highlight> and{" "}
+            <Highlight>earning by completing tasks</Highlight>.
           </p>
 
           <div className="mt-8 overflow-hidden rounded-2xl border border-zinc-200 dark:border-zinc-800">
@@ -166,7 +152,7 @@ export default function NearHandCaseStudyPage() {
           </div>
         </section>
 
-        {/* The Problem */}
+        {/* Product Thinking */}
         <section className="mt-24">
           <p className="mb-3 text-sm font-medium uppercase tracking-[0.25em] text-zinc-500 dark:text-zinc-400">
             Product Thinking
@@ -183,25 +169,36 @@ export default function NearHandCaseStudyPage() {
             </p>
 
             <p>
-              If someone asks another person to spend money, visit a location,
-              purchase something, and eventually deliver it, the platform has to
-              answer questions such as:
+              When software coordinates a request that eventually becomes a
+              physical action, the system needs to represent more than just
+              data. It needs to represent{" "}
+              <Highlight>
+                responsibility, progress, authorization, and payment state
+              </Highlight>
+              .
             </p>
 
+            <p>Some of the engineering questions included:</p>
+
             <ul className="list-disc space-y-3 pl-6">
-              <li>Who is responsible for the task?</li>
+              <li>Who is responsible for a task?</li>
               <li>What exactly does the client expect?</li>
-              <li>How does the runner prove progress?</li>
-              <li>When should payment be considered successful?</li>
-              <li>How can unauthorized users modify tasks?</li>
-              <li>How does the platform represent progress?</li>
-              <li>What happens when something goes wrong?</li>
+              <li>How should task progress be represented?</li>
+              <li>How should payment state be tracked?</li>
+              <li>How can unauthorized users modify resources?</li>
+              <li>
+                What should happen when a workflow does not complete normally?
+              </li>
+              <li>
+                Which rules belong in the frontend and which belong on the
+                server?
+              </li>
             </ul>
 
             <p>
-              These requirements pushed the project toward a{" "}
-              <Highlight>workflow-driven architecture</Highlight> instead of
-              simply building a collection of disconnected pages.
+              These requirements pushed the application toward a{" "}
+              <Highlight>workflow-driven architecture</Highlight> rather than a
+              collection of disconnected CRUD screens.
             </p>
           </div>
         </section>
@@ -213,20 +210,23 @@ export default function NearHandCaseStudyPage() {
           </p>
 
           <h2 className="text-3xl font-semibold tracking-tight">
-            Three roles, three responsibilities
+            Three roles, clearly separated responsibilities
           </h2>
 
           <div className="mt-8 space-y-8 text-zinc-600 dark:text-zinc-400">
-            <p>The system is intentionally divided into three primary roles:</p>
+            <p>
+              The system separates its primary participants into three roles:
+            </p>
 
             <div className="grid gap-6 md:grid-cols-3">
               <div className="rounded-xl border border-zinc-200 p-6 dark:border-zinc-800">
                 <h3 className="font-semibold text-black dark:text-white">
                   Client
                 </h3>
+
                 <p className="mt-3 text-sm">
-                  Creates tasks, provides requirements, monitors progress, and
-                  pays for the requested service.
+                  Creates requests, provides requirements, monitors progress,
+                  and interacts with the platform around the requested task.
                 </p>
               </div>
 
@@ -234,9 +234,10 @@ export default function NearHandCaseStudyPage() {
                 <h3 className="font-semibold text-black dark:text-white">
                   Runner
                 </h3>
+
                 <p className="mt-3 text-sm">
-                  Accepts tasks, performs the physical work, provides progress
-                  updates, and completes the request.
+                  Performs the physical task and interacts with the workflow as
+                  the request progresses.
                 </p>
               </div>
 
@@ -244,41 +245,34 @@ export default function NearHandCaseStudyPage() {
                 <h3 className="font-semibold text-black dark:text-white">
                   Admin
                 </h3>
+
                 <p className="mt-3 text-sm">
-                  Provides operational oversight and manages platform-level
-                  responsibilities.
+                  Handles platform-level operational responsibilities and
+                  administrative capabilities.
                 </p>
               </div>
             </div>
 
             <p>
               Separating these responsibilities allowed me to implement{" "}
-              <Highlight>role-based access control</Highlight> instead of
+              <Highlight>role-based access control</Highlight> rather than
               relying on frontend navigation to determine what a user can do.
             </p>
           </div>
         </section>
 
-        {/* Login Screenshot */}
+        {/* Authentication */}
         <section className="mt-16">
-          <h3 className="text-2xl font-semibold">Authentication</h3>
+          <h3 className="text-2xl font-semibold">
+            Authentication and authorization
+          </h3>
 
           <p className="mt-4 text-zinc-600 dark:text-zinc-400">
-            Authentication is the entry point into the role-aware application.
-            After authentication, access is determined by{" "}
-            <Highlight>server-side authorization rules</Highlight>, not simply
-            by which interface a user can see.
+            Authentication provides the entry point into the application, but
+            authentication alone is not authorization. Access to sensitive
+            operations is determined by{" "}
+            <Highlight>server-side authorization rules</Highlight>.
           </p>
-
-          <div className="mt-8 overflow-hidden rounded-2xl border border-zinc-200 dark:border-zinc-800">
-            <Image
-              src="/projects/nearhand/login-page.webp"
-              alt="NearHand login page"
-              width={1600}
-              height={1000}
-              className="h-auto w-full"
-            />
-          </div>
         </section>
 
         {/* Architecture */}
@@ -293,8 +287,7 @@ export default function NearHandCaseStudyPage() {
 
           <div className="mt-8 rounded-xl border border-zinc-200 p-8 dark:border-zinc-800">
             <pre className="overflow-x-auto text-sm">
-              {`
-React + TypeScript
+              {`React + TypeScript
         │
         ▼
 React Router + API Client
@@ -310,8 +303,7 @@ PostgreSQL / Neon
         │
         ├──────────────► Paystack
         │
-        └──────────────► Production Deployment
-`}
+        └──────────────► Render`}
             </pre>
           </div>
 
@@ -325,18 +317,18 @@ PostgreSQL / Neon
 
             <p>
               The backend uses TypeScript and Prisma to provide a{" "}
-              <Highlight>type-safe application layer</Highlight> between the
-              business logic and PostgreSQL.
+              <Highlight>typed data-access layer</Highlight> between application
+              logic and PostgreSQL.
             </p>
 
             <p>
               PostgreSQL is hosted on Neon, while Paystack provides the payment
-              integration required for task-related transactions.
+              integration used by the application.
             </p>
 
             <p>
-              This separation keeps the system modular and makes it possible to
-              evolve the frontend independently from backend business logic.
+              The separation keeps the system modular and allows frontend
+              concerns to evolve independently from backend business logic.
             </p>
           </div>
         </section>
@@ -363,7 +355,7 @@ PostgreSQL / Neon
               </h3>
 
               <p className="mt-2">
-                Node.js, Express, and TypeScript using a modular API structure
+                Node.js, Express, and TypeScript with a modular API structure
                 for authentication, authorization, tasks, payments, and other
                 application concerns.
               </p>
@@ -385,8 +377,8 @@ PostgreSQL / Neon
               </h3>
 
               <p className="mt-2">
-                Paystack integration for handling the platform's payment
-                workflow.
+                Paystack integration with server-side payment validation and
+                explicit payment states.
               </p>
             </div>
 
@@ -396,15 +388,14 @@ PostgreSQL / Neon
               </h3>
 
               <p className="mt-2">
-                The application is deployed as a production web application,
-                with separate frontend and backend concerns and production
-                environment configuration.
+                Render-based production deployment with environment-specific
+                configuration and separate frontend/backend concerns.
               </p>
             </div>
           </div>
         </section>
 
-        {/* PostgreSQL */}
+        {/* Database */}
         <section className="mt-24">
           <p className="mb-3 text-sm font-medium uppercase tracking-[0.25em] text-zinc-500 dark:text-zinc-400">
             Database Design
@@ -417,17 +408,16 @@ PostgreSQL / Neon
           <div className="mt-8 space-y-6 text-zinc-600 dark:text-zinc-400">
             <p>
               I have extensive experience working with MongoDB and Mongoose,
-              particularly through EverAfter. For NearHand, however, I chose
-              PostgreSQL because the marketplace contains strongly related
-              business entities.
+              particularly through EverAfter. For NearHand, I chose PostgreSQL
+              because the marketplace contains strongly related business
+              entities.
             </p>
 
-            <p>A simplified relationship looks like:</p>
+            <p>A simplified domain model looks like:</p>
 
             <div className="rounded-xl border border-zinc-200 p-6 dark:border-zinc-800">
               <pre className="overflow-x-auto text-sm">
-                {`
-User
+                {`User
  │
  ├── Tasks
  │     │
@@ -437,21 +427,22 @@ User
  │
  ├── Reviews
  │
- └── Notifications
-`}
+ └── Notifications`}
               </pre>
             </div>
 
             <p>
               These relationships benefit from{" "}
-              <Highlight>foreign keys</Highlight>, relational constraints,
-              transactions, and predictable joins.
+              <Highlight>
+                foreign keys, relational constraints, and transactions
+              </Highlight>
+              .
             </p>
 
             <p>
-              The decision was therefore not about one database being
-              universally better than another. It was about choosing the data
-              model that best matched the problem.
+              The decision was therefore based on the application's data model
+              rather than treating one database technology as universally better
+              than another.
             </p>
           </div>
         </section>
@@ -469,7 +460,7 @@ User
               models and relationships.
             </p>
 
-            <p>The main domain entities include concepts such as:</p>
+            <p>The domain contains entities representing concepts such as:</p>
 
             <ul className="list-disc space-y-2 pl-6">
               <li>User</li>
@@ -482,15 +473,14 @@ User
 
             <p>
               Keeping the data layer explicit makes business relationships
-              easier to understand and reduces accidental inconsistencies
-              between application code and the database.
+              easier to reason about and reduces accidental inconsistencies.
             </p>
 
             <p>
-              This was also an opportunity to deepen my experience with{" "}
+              NearHand also gave me the opportunity to deepen my experience with{" "}
               <Highlight>PostgreSQL and Prisma</Highlight> while continuing to
-              rely on my existing{" "}
-              <Highlight>MongoDB/Mongoose expertise</Highlight>.
+              build on my existing{" "}
+              <Highlight>MongoDB and Mongoose experience</Highlight>.
             </p>
           </div>
         </section>
@@ -506,10 +496,9 @@ User
           </h2>
 
           <p className="mt-8 text-zinc-600 dark:text-zinc-400">
-            The client dashboard is centered around{" "}
-            <Highlight>task visibility</Highlight>, payment state, and the
-            ability to understand what is happening without navigating through
-            unnecessary screens.
+            The client dashboard focuses on{" "}
+            <Highlight>task visibility and clear next actions</Highlight>
+            rather than exposing unnecessary administrative complexity.
           </p>
 
           <div className="mt-8 overflow-hidden rounded-2xl border border-zinc-200 dark:border-zinc-800">
@@ -523,7 +512,7 @@ User
           </div>
         </section>
 
-        {/* Task Details */}
+        {/* Task Workflow */}
         <section className="mt-24">
           <p className="mb-3 text-sm font-medium uppercase tracking-[0.25em] text-zinc-500 dark:text-zinc-400">
             Task Workflow
@@ -535,41 +524,34 @@ User
 
           <div className="mt-8 space-y-6 text-zinc-600 dark:text-zinc-400">
             <p>
-              A task is more than a title and description. It represents a
-              real-world request with financial and operational consequences.
+              A task represents more than a title and description. It represents
+              a real-world request with operational and financial consequences.
             </p>
 
             <p>
               Tasks can contain multiple items, expected prices, quantities,
-              notes, and other information required for execution.
+              notes, and supporting information required for execution.
             </p>
 
             <div className="rounded-xl border border-zinc-200 p-6 dark:border-zinc-800">
               <pre className="overflow-x-auto text-sm">
-                {`
-Task
+                {`Task
  │
- ├── Item
- │    ├── Name
- │    ├── Expected Price
- │    ├── Quantity
- │    ├── Photo
- │    └── Notes
+ ├── Items
  │
- ├── Runner Fee
+ ├── Pricing Information
  │
- ├── Platform Charge
+ ├── Task Requirements
  │
- └── Payment Status
-`}
+ └── Payment State`}
               </pre>
             </div>
 
             <p>
-              Separating task-level information from individual task items
-              provides a cleaner foundation for{" "}
+              Separating task-level information from individual items provides a
+              cleaner foundation for{" "}
               <Highlight>
-                validation, pricing, and future marketplace features
+                validation, pricing, and future marketplace capabilities
               </Highlight>
               .
             </p>
@@ -586,56 +568,39 @@ Task
           </div>
         </section>
 
-        {/* Trust Workflow */}
+        {/* Trust Architecture */}
         <section className="mt-24">
           <p className="mb-3 text-sm font-medium uppercase tracking-[0.25em] text-zinc-500 dark:text-zinc-400">
-            Trust Architecture
+            Marketplace Design
           </p>
 
           <h2 className="text-3xl font-semibold tracking-tight">
-            Designing trust before adding complexity
+            Designing for accountability
           </h2>
 
           <div className="mt-8 space-y-6 text-zinc-600 dark:text-zinc-400">
             <p>
-              The difficult part of a physical-task marketplace is not creating
-              the task.
+              Physical-task marketplaces introduce uncertainty that does not
+              exist in a typical software transaction.
             </p>
 
             <p>
-              The difficult part is giving both sides enough visibility to trust
-              the process.
-            </p>
-
-            <p>NearHand therefore uses explicit operational states:</p>
-
-            <div className="rounded-xl border border-zinc-200 p-6 dark:border-zinc-800">
-              <pre className="overflow-x-auto text-sm">
-                {`
-Task Created
-      ↓
-Accepted
-      ↓
-At Market
-      ↓
-Proof Submitted
-      ↓
-On The Way
-      ↓
-Completed
-`}
-              </pre>
-            </div>
-
-            <p>
-              These states create a shared understanding between the Client,
-              Runner, and platform.
+              The application therefore treats{" "}
+              <Highlight>
+                task progress as structured application state
+              </Highlight>
+              rather than relying entirely on free-form communication.
             </p>
 
             <p>
-              The architecture is designed around{" "}
-              <Highlight>proof-based execution</Highlight> rather than asking
-              users to blindly trust that a task happened.
+              This gives the Client, Runner, and platform a shared understanding
+              of where a task is in its lifecycle.
+            </p>
+
+            <p>
+              The public implementation deliberately focuses on the general
+              principle rather than exposing the internal operational rules
+              behind NearHand's trust and fulfillment mechanisms.
             </p>
           </div>
         </section>
@@ -652,14 +617,14 @@ Completed
 
           <p className="mt-8 text-zinc-600 dark:text-zinc-400">
             The runner interface is designed around{" "}
-            <Highlight>what needs to happen next</Highlight> rather than
-            overwhelming the user with administrative information.
+            <Highlight>clear actions and task progression</Highlight> rather
+            than overwhelming the user with administrative information.
           </p>
 
           <p className="mt-4 text-zinc-600 dark:text-zinc-400">
-            Because the Runner may be using the application while physically
-            performing an errand, the interface prioritizes clear actions and
-            status progression.
+            Because a Runner may use the application while physically completing
+            a task, the interface prioritizes clarity, touch accessibility, and
+            the information needed for the current stage.
           </p>
 
           <div className="mt-8 overflow-hidden rounded-2xl border border-zinc-200 dark:border-zinc-800">
@@ -673,100 +638,84 @@ Completed
           </div>
         </section>
 
-        {/* State Machine */}
+        {/* State Management */}
         <section className="mt-20">
-          <h2 className="text-3xl font-semibold">
-            State machines instead of arbitrary updates
-          </h2>
+          <h2 className="text-3xl font-semibold">Controlled workflow states</h2>
 
           <div className="mt-8 space-y-6 text-zinc-600 dark:text-zinc-400">
             <p>
               A common source of bugs in workflow-driven applications is
-              allowing records to jump between states without enforcing
-              transition rules.
-            </p>
-
-            <p>NearHand treats task status as a controlled workflow:</p>
-
-            <div className="rounded-xl border border-zinc-200 p-6 dark:border-zinc-800">
-              <pre className="overflow-x-auto text-sm">
-                {`
-PENDING_PAYMENT
-       ↓
-OPEN
-       ↓
-ACCEPTED
-       ↓
-IN_PROGRESS
-       ↓
-COMPLETED
-`}
-              </pre>
-            </div>
-
-            <p>
-              This approach makes invalid states easier to prevent and gives
-              future features such as notifications, dispute handling, and
-              payment processing a predictable foundation.
+              allowing records to move between states without enforcing valid
+              transitions.
             </p>
 
             <p>
-              The key principle is{" "}
-              <Highlight>
-                business rules should be enforced by the backend
-              </Highlight>
-              , not merely suggested by the UI.
+              NearHand therefore treats task status as a{" "}
+              <Highlight>controlled backend workflow</Highlight>.
+            </p>
+
+            <p>
+              The public documentation intentionally avoids publishing the
+              complete transition map. What matters architecturally is that
+              important state changes are validated by the server rather than
+              being arbitrary frontend updates.
+            </p>
+
+            <p>
+              This provides a predictable foundation for notifications,
+              payments, operational tooling, and future dispute handling.
             </p>
           </div>
         </section>
 
-        {/* Payment */}
+        {/* Payments */}
         <section className="mt-24">
           <p className="mb-3 text-sm font-medium uppercase tracking-[0.25em] text-zinc-500 dark:text-zinc-400">
             Payments
           </p>
 
           <h2 className="text-3xl font-semibold tracking-tight">
-            Designing the payment workflow
+            Designing a reliable payment workflow
           </h2>
 
           <div className="mt-8 space-y-6 text-zinc-600 dark:text-zinc-400">
             <p>
               Payments introduce another layer of responsibility because the
-              platform is coordinating money between participants in a
-              real-world transaction.
+              platform coordinates a financial transaction around a physical
+              service.
             </p>
 
             <p>
-              The task pricing model separates the major financial components:
+              The application keeps financial information structured rather than
+              treating a client-provided total as authoritative.
             </p>
 
             <div className="rounded-xl border border-zinc-200 p-6 dark:border-zinc-800">
               <pre className="overflow-x-auto text-sm">
-                {`
-Items / Expected Cost
-        +
-Runner Fee
-        +
-Platform Charge
+                {`Task Financial Data
         ↓
-Total Task Amount
+Server Validation
         ↓
-Payment
-`}
+Payment Initialization
+        ↓
+Provider Processing
+        ↓
+Server Verification
+        ↓
+Application Payment State`}
               </pre>
             </div>
 
             <p>
-              This separation makes pricing easier to reason about and gives the
-              backend explicit values to validate instead of relying on a single
-              opaque total supplied by the client.
+              The important engineering principle is{" "}
+              <Highlight>server-side payment verification</Highlight>. A
+              frontend success message is not treated as proof that a payment
+              should be considered complete.
             </p>
 
             <p>
-              The payment integration is built around{" "}
-              <Highlight>server-side verification</Highlight> and explicit
-              payment state rather than trusting frontend success alone.
+              The public documentation intentionally does not expose NearHand's
+              internal transaction economics or operational fund-flow rules.
             </p>
           </div>
         </section>
@@ -783,9 +732,9 @@ Payment
 
           <div className="mt-8 space-y-6 text-zinc-600 dark:text-zinc-400">
             <p>
-              NearHand treats the frontend as an untrusted client. A user seeing
-              a button does not determine whether they are actually authorized
-              to perform the operation.
+              NearHand treats the frontend as an untrusted client. Seeing a
+              button in the interface does not determine whether a user is
+              actually authorized to perform the operation.
             </p>
 
             <ul className="list-disc space-y-4 pl-6">
@@ -805,7 +754,7 @@ Payment
               </li>
 
               <li>
-                Payment operations are validated on the server rather than
+                Payment operations are verified on the server rather than
                 trusting client-provided success states.
               </li>
 
@@ -813,13 +762,18 @@ Payment
                 Business rules are enforced at the API layer so they cannot be
                 bypassed simply by modifying frontend requests.
               </li>
+
+              <li>
+                Input validation protects the API from malformed or unexpected
+                data.
+              </li>
             </ul>
 
             <p>
-              These decisions follow a{" "}
-              <Highlight>defense-in-depth approach</Highlight>: authentication,
-              authorization, ownership, validation, and business rules each
-              contribute to protecting the system.
+              These decisions form a{" "}
+              <Highlight>defense-in-depth approach</Highlight> where
+              authentication, authorization, ownership, validation, and business
+              rules each contribute to system integrity.
             </p>
           </div>
         </section>
@@ -871,8 +825,9 @@ Payment
 
           <div className="mt-8 space-y-5 text-zinc-600 dark:text-zinc-400">
             <p>
-              Rather than designing desktop screens and shrinking them for
-              mobile, layouts were structured around the smaller viewport first.
+              Rather than designing desktop screens and simply shrinking them
+              for mobile, layouts were structured around smaller viewports
+              first.
             </p>
 
             <p>
@@ -881,10 +836,9 @@ Payment
             </p>
 
             <p>
-              The objective was not simply{" "}
-              <Highlight>"responsive CSS"</Highlight>. It was ensuring that the
-              product remains usable while someone is actually performing the
-              physical work the application coordinates.
+              The objective was not simply <Highlight>responsive CSS</Highlight>
+              . It was making the product usable while someone is actually
+              performing the physical work the application coordinates.
             </p>
           </div>
         </section>
@@ -902,14 +856,17 @@ Payment
           <div className="mt-8 space-y-10">
             <div>
               <h3 className="text-xl font-semibold">
-                Designing a marketplace around trust
+                Designing software around physical work
               </h3>
 
               <p className="mt-3 text-zinc-600 dark:text-zinc-400">
                 Physical tasks introduce uncertainty that ordinary CRUD
-                applications do not. I addressed this by introducing{" "}
-                <Highlight>explicit task states</Highlight>, role separation,
-                progress actions, and proof-oriented workflows.
+                applications do not. I addressed this through{" "}
+                <Highlight>
+                  explicit workflows, role separation, validation, and
+                  structured task progression
+                </Highlight>
+                .
               </p>
             </div>
 
@@ -919,10 +876,10 @@ Payment
               </h3>
 
               <p className="mt-3 text-zinc-600 dark:text-zinc-400">
-                Task costs, runner fees, and platform charges need to remain
-                consistent. This required separating financial components and
-                ensuring important calculations and validation occur on the
-                backend.
+                Financial information needs to remain consistent across the
+                frontend, backend, database, and payment provider. Important
+                calculations and payment verification therefore happen on the
+                server.
               </p>
             </div>
 
@@ -932,11 +889,12 @@ Payment
               </h3>
 
               <p className="mt-3 text-zinc-600 dark:text-zinc-400">
-                Role checks alone are not enough. A user may have a valid
-                account while still attempting to access another user's
-                resource. I therefore implemented{" "}
-                <Highlight>ownership validation</Highlight> alongside role
-                authorization.
+                Role checks alone are not enough. A valid user can still attempt
+                to access another user's resource. I therefore implemented{" "}
+                <Highlight>
+                  ownership validation alongside role authorization
+                </Highlight>
+                .
               </p>
             </div>
 
@@ -954,20 +912,20 @@ Payment
 
             <div>
               <h3 className="text-xl font-semibold">
-                Deploying a separated full-stack application
+                Deploying a real full-stack application
               </h3>
 
               <p className="mt-3 text-zinc-600 dark:text-zinc-400">
-                Production deployment required dealing with frontend and backend
-                build processes, environment configuration, API connectivity,
-                database connectivity, and deployment-specific failures.
+                Production deployment required dealing with build configuration,
+                environment variables, API connectivity, dependency
+                availability, TypeScript configuration, and production server
+                behavior.
               </p>
             </div>
 
             <div>
               <h3 className="text-xl font-semibold">
-                Designing for small screens without sacrificing desktop
-                usability
+                Designing for small screens
               </h3>
 
               <p className="mt-3 text-zinc-600 dark:text-zinc-400">
@@ -999,8 +957,7 @@ Payment
 
             <div className="rounded-xl border border-zinc-200 p-6 dark:border-zinc-800">
               <pre className="overflow-x-auto text-sm">
-                {`
-Product Idea
+                {`Product Idea
      ↓
 Business Rules
      ↓
@@ -1016,8 +973,7 @@ Testing & Debugging
      ↓
 Deployment
      ↓
-Production Verification
-`}
+Production Verification`}
               </pre>
             </div>
 
@@ -1082,12 +1038,9 @@ Production Verification
               requirements.
             </p>
 
-            <p>In other words:</p>
-
             <div className="rounded-xl border border-zinc-200 p-6 dark:border-zinc-800">
               <pre className="overflow-x-auto text-sm">
-                {`
-AI
+                {`AI
  ↓
 Suggestion
  ↓
@@ -1095,8 +1048,7 @@ Human Review
  ↓
 Test Against Real System
  ↓
-Keep / Modify / Reject
-`}
+Keep / Modify / Reject`}
               </pre>
             </div>
 
@@ -1121,29 +1073,28 @@ Keep / Modify / Reject
 
           <div className="mt-8 space-y-6 text-zinc-600 dark:text-zinc-400">
             <p>
-              NearHand uses PostgreSQL, but it is important to distinguish
-              database choice from database experience.
+              NearHand uses PostgreSQL, but database choice should be separated
+              from database experience.
             </p>
 
             <p>
               My previous full-stack product, EverAfter, was built around{" "}
-              <Highlight>MongoDB and Mongoose</Highlight>, including relational
-              modeling between collections and memories, transactions, ownership
-              validation, account lifecycle management, and production data
+              <Highlight>MongoDB and Mongoose</Highlight>, giving me practical
+              experience with document modeling, ownership validation,
+              transactions, account lifecycle management, and production data
               handling.
             </p>
 
             <p>
-              NearHand gave me the opportunity to apply the same backend
+              NearHand gave me the opportunity to apply those backend
               engineering principles using{" "}
               <Highlight>PostgreSQL and Prisma</Highlight>.
             </p>
 
             <p>
-              The experience has strengthened my ability to select and work with
-              a database based on the application's actual data relationships
-              rather than treating one database technology as the answer to
-              every problem.
+              The experience strengthened my ability to choose a database based
+              on the application's actual data relationships rather than
+              treating one technology as the answer to every problem.
             </p>
           </div>
         </section>
@@ -1185,7 +1136,7 @@ Keep / Modify / Reject
                   <td className="px-6 py-4">Core workflow</td>
                   <td className="px-6 py-4">Collections → Memories</td>
                   <td className="px-6 py-4">
-                    <Highlight>Client → Runner → Task Completion</Highlight>
+                    <Highlight>Client → Runner → Task</Highlight>
                   </td>
                 </tr>
 
@@ -1201,7 +1152,7 @@ Keep / Modify / Reject
           </div>
         </section>
 
-        {/* What I Learned */}
+        {/* Lessons */}
         <section className="mt-24">
           <p className="mb-3 text-sm font-medium uppercase tracking-[0.25em] text-zinc-500 dark:text-zinc-400">
             Lessons
@@ -1300,13 +1251,10 @@ Keep / Modify / Reject
           </h2>
 
           <div className="mt-8 space-y-6 text-zinc-600 dark:text-zinc-400">
-            <p>
-              NearHand is currently deployed and accessible as a working web
-              application.
-            </p>
+            <p>NearHand is currently deployed as a working web application.</p>
 
             <p>
-              The current version establishes the core marketplace foundation:
+              The current version establishes the marketplace foundation:
               <Highlight>authentication</Highlight>,{" "}
               <Highlight>role-based workflows</Highlight>,{" "}
               <Highlight>task management</Highlight>,{" "}
@@ -1317,8 +1265,8 @@ Keep / Modify / Reject
 
             <p>
               The architecture is intentionally designed so additional
-              operational capabilities can be added without replacing the core
-              system.
+              capabilities can be introduced without replacing the core
+              application.
             </p>
 
             <div className="mt-8 flex flex-wrap gap-4">
@@ -1347,39 +1295,45 @@ Keep / Modify / Reject
           </div>
         </section>
 
-        {/* Future Roadmap */}
+        {/* Future Direction */}
         <section className="mt-24">
           <p className="mb-3 text-sm font-medium uppercase tracking-[0.25em] text-zinc-500 dark:text-zinc-400">
-            Future Roadmap
+            Future Direction
           </p>
 
           <h2 className="text-3xl font-semibold tracking-tight">
-            Where I would take NearHand next
+            Continuing to evolve the platform
           </h2>
 
-          <ul className="mt-8 list-disc space-y-4 pl-6 text-zinc-600 dark:text-zinc-400">
-            <li>Identity verification and stronger runner trust mechanisms</li>
+          <div className="mt-8 space-y-6 text-zinc-600 dark:text-zinc-400">
+            <p>
+              NearHand is an active product rather than a finished demo, so
+              future development will be driven by real usage, operational
+              learning, and validated product requirements.
+            </p>
 
-            <li>Push notifications for important task status changes</li>
+            <p>
+              The architecture leaves room for{" "}
+              <Highlight>stronger identity and trust capabilities</Highlight>,
+              improved notifications, richer mobile experiences, additional
+              operational tooling, and other marketplace capabilities.
+            </p>
 
-            <li>Ratings and reviews to strengthen marketplace reputation</li>
+            <p>
+              I intentionally keep the detailed product roadmap private because
+              NearHand is being developed as a{" "}
+              <Highlight>
+                real startup rather than only a portfolio project
+              </Highlight>
+              .
+            </p>
 
-            <li>Geolocation features for proximity-aware task discovery</li>
-
-            <li>More sophisticated payment and escrow workflows</li>
-
-            <li>React Native mobile applications</li>
-
-            <li>Advanced dispute-resolution workflows</li>
-
-            <li>AI-assisted task categorization and operational tooling</li>
-          </ul>
-
-          <p className="mt-8 text-zinc-600 dark:text-zinc-400">
-            The long-term direction is to make{" "}
-            <Highlight>trusted local execution</Highlight> as accessible as
-            ordering a product online.
-          </p>
+            <p>
+              The long-term product direction is centered on making{" "}
+              <Highlight>trusted local execution</Highlight> easier to access
+              through software.
+            </p>
+          </div>
         </section>
 
         {/* Final Summary */}
@@ -1387,7 +1341,7 @@ Keep / Modify / Reject
           <div className="rounded-2xl border border-zinc-200 p-8 dark:border-zinc-800">
             <p className="text-lg leading-8 text-zinc-600 dark:text-zinc-400">
               NearHand represents the progression from building a full-stack
-              application to designing a system around{" "}
+              application to designing software around{" "}
               <Highlight>real-world business constraints</Highlight>.
             </p>
 
@@ -1403,8 +1357,17 @@ Keep / Modify / Reject
 
             <p className="mt-5 text-lg leading-8 text-zinc-600 dark:text-zinc-400">
               More importantly, it represents my approach to engineering:
-              understand the problem, make the rules explicit, build the system,
-              deploy it, verify it, and keep improving it.
+              understand the problem, make the important rules explicit, build
+              the system, deploy it, verify it, and keep improving it.
+            </p>
+
+            <p className="mt-5 text-lg leading-8 text-zinc-600 dark:text-zinc-400">
+              The public case study shows the engineering decisions that matter
+              for understanding the project while deliberately leaving{" "}
+              <Highlight>
+                NearHand's proprietary operational strategy private
+              </Highlight>
+              .
             </p>
           </div>
         </section>
